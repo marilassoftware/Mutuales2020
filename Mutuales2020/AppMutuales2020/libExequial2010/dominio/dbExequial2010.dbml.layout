@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 22.75" name="maestros">
+  <DataContextMoniker Name="/dbExequial2010DataContext" />
+  <nestedChildShapes>
+    <classShape Id="a02241fe-8573-445d-9e70-98a903556be2" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblMunicipio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c89e6881-f0fe-4d24-9efe-871533dabcee" absoluteBounds="0.515, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3eee43ac-0822-4166-ad46-b6f8648de25c" isExpanded="false" absoluteBounds="0.5, 1, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblBarrio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3283a3f5-35bf-4520-8332-d9d359566614" absoluteBounds="0.515, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 0.95); (1.5 : 1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblMunicipio/tblMunicipio_tblBarrio" />
+      <nodes>
+        <classShapeMoniker Id="a02241fe-8573-445d-9e70-98a903556be2" />
+        <classShapeMoniker Id="3eee43ac-0822-4166-ad46-b6f8648de25c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="be01f48c-af1f-443a-9e1e-d8c7f1ee72b0" isExpanded="false" absoluteBounds="0.5, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblLogdeActividade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c10de809-c770-4a02-9b50-3c9a5f9c3738" absoluteBounds="0.51500000000000012, 1.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9c1e501-fa0a-4f06-af4e-f1f778d894a8" isExpanded="false" absoluteBounds="3.125, 0.5, 2.75, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblOficio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b96033bc-1bcb-4b6c-aec0-7c84d6ff24c2" absoluteBounds="3.14, 0.96, 2.7199999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ca9d889-3312-4143-9f25-6d4bd05f9bf8" isExpanded="false" absoluteBounds="0.5, 2, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblTiposdeCredito" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cf9efdd-cc30-4525-b6af-70ba51ea48b8" absoluteBounds="0.515, 2.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a9413a8-2b23-4c7f-8564-764f412c5d33" isExpanded="false" absoluteBounds="3.125, 1, 2.75, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblOtrosEgreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc64f55b-bf7e-447f-95bf-d5736c9be1a9" absoluteBounds="3.14, 1.46, 2.7199999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db59374e-b19c-4954-b0e9-755e1cb24e47" isExpanded="false" absoluteBounds="3.125, 1.5, 2.75, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblOtrosIngreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a34cbaee-b069-4f15-9979-ac698837e059" absoluteBounds="3.14, 1.96, 2.7199999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8bb8e1bd-5758-45b9-9d9c-c7024ab9efcf" isExpanded="false" absoluteBounds="3.125, 2, 2.75, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCuenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2d86472-8734-4c1c-9a88-cbdeb5040880" absoluteBounds="3.14, 2.46, 2.7199999999999998, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c5dae1d-4859-458e-bcf5-8f14f9d550f6" isExpanded="false" absoluteBounds="7.125, 1, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCuentasDebitoParesDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eea94efa-06b3-4098-be35-61d3677ead48" absoluteBounds="7.14, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f293e2e-99f7-464f-b0b2-3d5418c7f15b" isExpanded="false" absoluteBounds="7.125, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCuentasPare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12c23ea7-d7cd-486d-be42-a077e7cbb711" absoluteBounds="7.14, 1.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.125 : 1.5); (6.75 : 1.125); (6.25 : 1.125); (6.25 : 1.825); (5.875 : 1.45)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCuentasPare/tblCuentasPare_tblOtrosEgreso" />
+      <nodes>
+        <classShapeMoniker Id="4f293e2e-99f7-464f-b0b2-3d5418c7f15b" />
+        <classShapeMoniker Id="8a9413a8-2b23-4c7f-8564-764f412c5d33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.125 : 1.7562525); (6.26458583333333 : 1.7562525 : JumpStart); (6.09791916666667 : 1.7562525 : JumpEnd); (5.875 : 1.7562525)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCuentasPare/tblCuentasPare_tblOtrosIngreso" />
+      <nodes>
+        <classShapeMoniker Id="4f293e2e-99f7-464f-b0b2-3d5418c7f15b" />
+        <classShapeMoniker Id="db59374e-b19c-4954-b0e9-755e1cb24e47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.1562525 : 1.5); (8.1562525 : 1.45)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCuentasPare/tblCuentasPare_tblCuentasDebitoParesDetalle" />
+      <nodes>
+        <classShapeMoniker Id="4f293e2e-99f7-464f-b0b2-3d5418c7f15b" />
+        <classShapeMoniker Id="3c5dae1d-4859-458e-bcf5-8f14f9d550f6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d0d13892-34e4-488f-b356-ba555780197a" isExpanded="false" absoluteBounds="7.125, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCuentasCreditoParesDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="400decb9-d156-47d5-800b-14cab1ab9345" absoluteBounds="7.1400000000000006, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.64062625 : 1.5); (7.64062625 : 1.465625); (9.140625 : 1.465625); (9.140625 : 0.725); (9.125 : 0.725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCuentasPare/tblCuentasPare_tblCuentasCreditoParesDetalle" />
+      <nodes>
+        <classShapeMoniker Id="4f293e2e-99f7-464f-b0b2-3d5418c7f15b" />
+        <classShapeMoniker Id="d0d13892-34e4-488f-b356-ba555780197a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c811eca2-881c-4d8a-a8ff-4c70624748b8" isExpanded="false" absoluteBounds="0.5, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblProducto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adcd03d8-ff47-4621-8e9b-7960935b9d93" absoluteBounds="0.51500000000000012, 3.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8b189d2-7c56-4017-be81-8563b74842e1" isExpanded="false" absoluteBounds="0.5, 4, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblProvedore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="156883f7-84b0-42f7-b003-b8bdfe017d96" absoluteBounds="0.51500000000000012, 4.4600000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b98b0fe6-a19e-4428-b3e3-31622166243d" isExpanded="false" absoluteBounds="0.5, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblVideosAyuda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="873f237f-0d56-48bf-acbd-c1a60a6938c4" absoluteBounds="0.51500000000000012, 2.9600000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ade604ff-c679-48a2-b76b-51eb311dad0b" isExpanded="false" absoluteBounds="3.125, 2.5, 2.75, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCuentasOperacionesContabilidadGlobale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71f88d1d-f6f0-4f2b-813f-55af6e0cb749" absoluteBounds="3.14, 2.96, 2.7199999999999998, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43728ec3-0698-478d-a154-0286902a0799" isExpanded="false" absoluteBounds="3.125, 3, 2.75, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCuentasPeriodo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="505935e9-022e-47ac-80ed-d582fa11c64f" absoluteBounds="3.14, 3.46, 2.7199999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d1868cb7-104a-4ebf-8d89-341b721f6733" isExpanded="false" absoluteBounds="0.5, 4.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCredito" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d029f6e-9e62-4b98-a0f8-cea3276f4983" absoluteBounds="0.51500000000000057, 4.96, 1.9700000000000002, 7.3645426432291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c74b70ad-438f-4516-ad95-604be6ad56d8" isExpanded="false" absoluteBounds="0.5, 5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCreditosCuota" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4077fde-47e6-4e83-87d3-299ff4887ba4" absoluteBounds="0.51500000000000012, 5.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 4.95); (1.5 : 5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCredito/tblCredito_tblCreditosCuota" />
+      <nodes>
+        <classShapeMoniker Id="d1868cb7-104a-4ebf-8d89-341b721f6733" />
+        <classShapeMoniker Id="c74b70ad-438f-4516-ad95-604be6ad56d8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="939d2a97-1fc3-4e3c-9bbf-f311cfc130ab" isExpanded="false" absoluteBounds="0.5, 5.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCreditosInteresesCausado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3038e608-be26-4613-80da-a468cfd66b88" absoluteBounds="0.51500000000000012, 5.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.5 : 4.94273076923077); (0.125 : 5.31773076923077); (0.125 : 5.725); (0.5 : 5.725)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCredito/tblCredito_tblCreditosInteresesCausado" />
+      <nodes>
+        <classShapeMoniker Id="d1868cb7-104a-4ebf-8d89-341b721f6733" />
+        <classShapeMoniker Id="939d2a97-1fc3-4e3c-9bbf-f311cfc130ab" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="26bbc709-83e5-455e-be87-e1df6cc9fae2" isExpanded="false" absoluteBounds="0.5, 6, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCreditosLinea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="601f4b3b-e93e-4afb-9327-dcd9a7267470" absoluteBounds="0.51500000000000012, 6.4600000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.522152846153846 : 6); (0.28125 : 5.75909715384615); (0.28125 : 5.17636438461538); (0.507614384615385 : 4.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCreditosLinea/tblCreditosLinea_tblCredito" />
+      <nodes>
+        <classShapeMoniker Id="26bbc709-83e5-455e-be87-e1df6cc9fae2" />
+        <classShapeMoniker Id="d1868cb7-104a-4ebf-8d89-341b721f6733" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ed15d39e-befc-4067-9840-8f8e168b8dcf" isExpanded="false" absoluteBounds="0.5, 6.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCreditosClasificacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a089b2cd-6037-462c-811e-ab7b39ac21a5" absoluteBounds="0.51500000000000012, 6.9600000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ac8ac25-9051-462b-8fd6-295843e202e0" isExpanded="false" absoluteBounds="0.5, 7, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCreditosTipo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c13d0d8b-5d69-498a-9d09-d27305640256" absoluteBounds="0.515, 7.4600000000000009, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5cf3de30-a0a8-44b9-82e6-1dba2f4e770f" isExpanded="false" absoluteBounds="0.5, 8, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosaFuturo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb4a3efd-7b89-448a-a97a-1ab43061ce01" absoluteBounds="0.51500000000000012, 8.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="173e2a74-0b82-455b-8000-1216e9de8f1f" isExpanded="false" absoluteBounds="0.5, 8.5, 2.25, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosaFuturoBonificacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65dc5ff6-4b08-4410-8126-f89700420aaf" absoluteBounds="0.515, 8.96, 2.2199999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b76dc3e-823c-4127-b2c0-94f97fcac1fc" isExpanded="false" absoluteBounds="0.5, 9, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosaFuturoDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59b24708-3397-4014-abcc-0670f9a0bbf6" absoluteBounds="0.51500000000000012, 9.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 8.45); (1.5 : 8.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblAhorrosaFuturo/tblAhorrosaFuturo_tblAhorrosaFuturoBonificacion" />
+      <nodes>
+        <classShapeMoniker Id="5cf3de30-a0a8-44b9-82e6-1dba2f4e770f" />
+        <classShapeMoniker Id="173e2a74-0b82-455b-8000-1216e9de8f1f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.5 : 8.45); (0.125 : 8.825); (0.125 : 9.225); (0.5 : 9.225)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblAhorrosaFuturo/tblAhorrosaFuturo_tblAhorrosaFuturoDetalle" />
+      <nodes>
+        <classShapeMoniker Id="5cf3de30-a0a8-44b9-82e6-1dba2f4e770f" />
+        <classShapeMoniker Id="8b76dc3e-823c-4127-b2c0-94f97fcac1fc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="93f26aaa-7e70-4287-b4e5-f641a85532da" isExpanded="false" absoluteBounds="0.5, 9.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosNavideno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86f3877e-36fc-4911-b32d-7d20c15de377" absoluteBounds="0.515, 9.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ac0a8e4-568e-4061-a69c-86683772822a" isExpanded="false" absoluteBounds="0.5, 10, 2.375, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosNavidenoBonificacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44312133-f3c2-4fc0-949c-925587a4c9cd" absoluteBounds="0.515, 10.46, 2.3449999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="328e09a4-8e7a-4be4-801b-0bd6c9a6b582" isExpanded="false" absoluteBounds="0.5, 10.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosNavidenoDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e41670d8-96dc-4bf8-b849-e2133ce96a37" absoluteBounds="0.51500000000000012, 10.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.5 : 9.95); (0.125 : 10.325); (0.125 : 10.725); (0.5 : 10.725)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblAhorrosNavideno/tblAhorrosNavideno_tblAhorrosNavidenoDetalle" />
+      <nodes>
+        <classShapeMoniker Id="93f26aaa-7e70-4287-b4e5-f641a85532da" />
+        <classShapeMoniker Id="328e09a4-8e7a-4be4-801b-0bd6c9a6b582" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4eb02ebe-fe0b-48f6-ab1d-5ad61cdb4a76" isExpanded="false" absoluteBounds="0.5, 11, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosCdt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1438fa26-4ece-4107-94b2-862a540a0515" absoluteBounds="0.51500000000000012, 11.46, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b3106c3c-6a33-42be-9ba2-342adc4c742f" isExpanded="false" absoluteBounds="0.5, 11.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosCdtsCausacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="111e7a14-557b-4162-aa23-28358da43920" absoluteBounds="0.51500000000000012, 11.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ea5d345-29f8-40a3-892d-45eb6b207069" isExpanded="false" absoluteBounds="0.5, 12.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosCdtsLiquidacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f961e1c2-e0bf-48c4-a7a0-2595191ccfba" absoluteBounds="0.515, 12.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0ff60df-9ef5-4fae-87f3-c41424251e88" isExpanded="false" absoluteBounds="0.5, 12, 2.375, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosCdtSCausacionTemp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60aed000-a451-4ccd-a736-8ad3f20847cc" absoluteBounds="0.515, 12.46, 2.3449999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 11.45); (1.5 : 11.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblAhorrosCdt/tblAhorrosCdt_tblAhorrosCdtsCausacion" />
+      <nodes>
+        <classShapeMoniker Id="4eb02ebe-fe0b-48f6-ab1d-5ad61cdb4a76" />
+        <classShapeMoniker Id="b3106c3c-6a33-42be-9ba2-342adc4c742f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c95231dc-64d6-47be-be6a-ec069a6a8cc5" isExpanded="false" absoluteBounds="0.5, 13, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosFijo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d32226ce-3226-43c0-bb2d-20737623f7c0" absoluteBounds="0.515, 13.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f257414c-4431-4476-ab68-c54ba7318c77" isExpanded="false" absoluteBounds="0.5, 13.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosInterese" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f2c5080-7451-40b9-ae15-771bb02743cd" absoluteBounds="0.51500000000000012, 13.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d118dad9-1614-4a88-90c2-62f12cb6c5c1" isExpanded="false" absoluteBounds="0.5, 14, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosInteresesHistorico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ef8f972-b33e-4a0c-a548-37f19df8f42d" absoluteBounds="0.51500000000000012, 14.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7dac4ead-6835-4c46-acef-be42b881e06f" isExpanded="false" absoluteBounds="0.5, 14.5, 2.25, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosInteresesEstudiantil" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87b2f0a9-3fcd-4e83-ab28-9a1231fe8f96" absoluteBounds="0.515, 14.96, 2.2199999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9807656-a93c-4e5a-b187-17cb450db9f5" isExpanded="false" absoluteBounds="0.5, 15, 2.5, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosInteresesHistoricoEstudiantil" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0271ea7a-eb5e-426d-a2d8-9d66fba6b8f3" absoluteBounds="0.515, 15.46, 2.4699999999999998, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97fdfa78-f79f-4700-a244-7c4aa463ae69" isExpanded="false" absoluteBounds="3.125, 4, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblServiciosPrimario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b58c2cf-32bc-4c1c-b344-3807ac917379" absoluteBounds="3.14, 4.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06c968fd-76e6-44e3-84da-a00c4f24421a" isExpanded="false" absoluteBounds="3.125, 5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblLogNuevoAño" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64671a5e-874d-4b1f-8adc-cd21cad2c5e5" absoluteBounds="3.14, 5.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6cfc3f4a-7f5f-4056-a1fb-6f6a2d7be5d7" isExpanded="false" absoluteBounds="6.125, 9.125, 2.5, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosAhorrosaFuturoLiquidacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0c835ee-2f5f-4532-ba4b-add33f64d423" absoluteBounds="6.1400000000000006, 9.585, 2.4699999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7eb2ace2-cd48-4ba9-82f6-1a77efc4985f" isExpanded="false" absoluteBounds="6.125, 8.625, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosPrestamosAbono" />
+      <nestedChildShapes>
+        <elementListCompartment Id="580c2b6c-6974-4fe5-bb36-70efed64a624" absoluteBounds="6.1400000000000006, 9.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" isExpanded="false" absoluteBounds="3.625, 8.875, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb6577c9-81d1-46e5-b337-ec434779d44c" absoluteBounds="3.6399999999999997, 9.335, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="962ebe65-f384-4cf7-82b0-dd566bb38a51" isExpanded="false" absoluteBounds="6.125, 10.125, 2.25, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosAhorrosCdtLiquidacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87021682-2420-4123-b88d-79e5b93bf003" absoluteBounds="6.1400000000000006, 10.585, 2.2199999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e86ddc81-5ffd-4f84-b675-0505e2d86658" isExpanded="false" absoluteBounds="6.125, 8.125, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosInterese" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46d61587-4f80-47a2-b678-d341de4e12a7" absoluteBounds="6.1400000000000006, 8.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="033d399b-bd8e-4985-8338-8181d79ab8c1" isExpanded="false" absoluteBounds="6.125, 11.125, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosAhorrosFijo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e92df4c8-f47a-4150-88a0-48366347fc6c" absoluteBounds="6.1400000000000006, 11.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="923dddb9-62eb-4735-a9ec-7b81faf4a7b5" isExpanded="false" absoluteBounds="6.125, 11.625, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosAhorrosEstudiante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38a856a6-4ee5-465f-badc-6f0f5e1af1f7" absoluteBounds="6.1400000000000006, 12.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d70ad9e3-8d23-457f-a9dd-3071eef500a1" isExpanded="false" absoluteBounds="6.125, 12.125, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosEgreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ac53329-70d8-47e2-91b6-4aca856ca0ce" absoluteBounds="6.1400000000000006, 12.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 8.975); (6.125 : 8.975)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosPrestamosAbono" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="7eb2ace2-cd48-4ba9-82f6-1a77efc4985f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 9.1937475); (6.125 : 9.1937475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosAhorrosaFuturoLiquidacion" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="6cfc3f4a-7f5f-4056-a1fb-6f6a2d7be5d7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 9.325); (6.125 : 10.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosAhorrosCdtLiquidacion" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="962ebe65-f384-4cf7-82b0-dd566bb38a51" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 8.875); (6.125 : 8.575)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosInterese" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="e86ddc81-5ffd-4f84-b675-0505e2d86658" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.2812505 : 9.325); (4.2812505 : 11.5984375); (4.55729441666667 : 11.5984375 : JumpStart); (4.72396108333333 : 11.5984375 : JumpEnd); (7.125 : 11.5984375); (7.125 : 11.575)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosAhorrosFijo" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="033d399b-bd8e-4985-8338-8181d79ab8c1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.92187275 : 9.325); (3.92187275 : 11.75); (4.55729441666667 : 11.75 : JumpStart); (4.72396108333333 : 11.75 : JumpEnd); (6.125 : 11.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosAhorrosEstudiante" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="923dddb9-62eb-4735-a9ec-7b81faf4a7b5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.64062775 : 9.325); (4.64062775 : 12.3124995); (6.125 : 12.3124995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosEgreso" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="d70ad9e3-8d23-457f-a9dd-3071eef500a1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1f112eaa-cd93-4398-915f-116acc6a0380" isExpanded="false" absoluteBounds="3.125, 6.5, 2.25, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosTransaccionesEstudiantil" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd43ef1f-71b5-4513-a504-bc3df1ca2101" absoluteBounds="3.14, 6.96, 2.2199999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3221eb56-c2f6-4285-8590-088482c978e6" isExpanded="false" absoluteBounds="3.125, 7, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosTransaccionesFijo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3864275e-11b9-4fc4-aed1-e5583984087d" absoluteBounds="3.1399999999999997, 7.4600000000000009, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a730994-3ce2-4277-82e4-b89edd902246" isExpanded="false" absoluteBounds="3.125, 7.625, 2.375, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCuentasOperacionesContabilidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0404897-d4f3-44a8-9df4-1db6b2aad839" absoluteBounds="3.14, 8.085, 2.3449999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0bc0c051-6bb4-435b-ab4c-10c5d7cd2346" isExpanded="false" absoluteBounds="3.125, 13.875, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblVentasDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c5a765d-b7c8-480c-a540-f4b4f4eb9eb7" absoluteBounds="3.14, 14.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="420d9cf7-5a8b-485a-a0bd-3ef92aa8cb49" isExpanded="false" absoluteBounds="3.125, 14.375, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblServiciosSecundario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3749c6ee-7a32-4fad-914e-52145e2eea34" absoluteBounds="3.14, 14.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8ac7183-9bd5-46d3-b405-731f8881db3c" isExpanded="false" absoluteBounds="3.125, 15.375, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEstadodeCuenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4194357d-035f-4061-b459-d39da5f0dfa2" absoluteBounds="3.14, 15.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0ddd2a9-2959-41f7-b09f-b57b3719ea91" isExpanded="false" absoluteBounds="11.875, 12.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosaFuturo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33cdf55a-60b0-4629-a2b7-e2a972f4bd67" absoluteBounds="11.89, 13.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b3bc1be5-71a2-4593-ac6c-52b28713d2f2" isExpanded="false" absoluteBounds="11.875, 7.25, 2.375, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosaFuturoMulta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb817d6b-b9d4-4a39-8a4c-c0079f18cfe2" absoluteBounds="11.89, 7.71, 2.3449999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5fcac2f-1b78-4819-8254-e4bd9b725a7d" isExpanded="false" absoluteBounds="11.875, 12.25, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosNavideno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1da8840-c762-45d6-9c5c-f2daa9170023" absoluteBounds="11.89, 12.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cb55595-48db-4d00-be1c-75002f69ab05" isExpanded="false" absoluteBounds="11.875, 7.75, 2.375, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosNavidenosMulta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a23ff52-69a2-4da7-a033-1d9adb61ce41" absoluteBounds="11.89, 8.21, 2.3449999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15133901-64e4-4d95-a9e9-f3d67aaef38a" isExpanded="false" absoluteBounds="11.875, 8.25, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosCdt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3fa9636-689e-4f31-960a-82d49f6111db" absoluteBounds="11.89, 8.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3924179-d01a-4ac2-8043-dc991f10a362" isExpanded="false" absoluteBounds="11.875, 10.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosCdtMulta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5d0b1be-c63a-4bf2-8c79-f6921bf69c23" absoluteBounds="11.89, 11.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6918acad-58f9-4a79-a2bf-e4276c1f3005" isExpanded="false" absoluteBounds="11.875, 9.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosEstudiantil" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0919355a-ad89-4449-bd27-90865c47e44a" absoluteBounds="11.89, 10.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b57c37be-221a-481b-8015-427d5429257b" isExpanded="false" absoluteBounds="11.875, 10.25, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosFijo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bade2918-0ff8-43b2-adec-f521565a7a73" absoluteBounds="11.89, 10.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="010c86c4-7c87-4941-8a08-901e7aa07378" isExpanded="false" absoluteBounds="9.125, 7.875, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cade765-3967-4987-9a05-e8f667cea1d5" absoluteBounds="9.14, 8.335, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bab66286-58ff-4e51-a1a2-acb550add2d5" isExpanded="false" absoluteBounds="11.875, 11.25, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosVenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53405b0d-67d8-4498-b451-2794fd1c950b" absoluteBounds="11.89, 11.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b667ae2-c8e4-4f9a-a063-b4a04bde53a3" isExpanded="false" absoluteBounds="11.875, 11.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosOtrosIngreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8afdbb96-b8ae-4fbc-86d8-0e1663c4455d" absoluteBounds="11.89, 12.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a8e1654-c486-4646-b2c3-658db1c5a655" isExpanded="false" absoluteBounds="11.875, 8.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosPrestamosAbono" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f90ba340-6803-4e9b-a77b-6c859f129f28" absoluteBounds="11.89, 9.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa3818c1-85cc-4362-9f6d-e7d517f95428" isExpanded="false" absoluteBounds="11.875, 14.25, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosCuota" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef0b36c5-42aa-4d55-816f-6927fba202a5" absoluteBounds="11.89, 14.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94383741-56e7-4c6d-9299-1a89ec59f602" isExpanded="false" absoluteBounds="11.875, 13.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosPrestamo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11f47ba4-0384-4c03-ab0a-d66fbb37a1f7" absoluteBounds="11.89, 14.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.6874975 : 8.325); (10.6874975 : 9.975); (10.7135397916667 : 9.975 : JumpStart); (11.1848980208333 : 9.975 : JumpEnd); (11.875 : 9.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosEstudiantil" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="6918acad-58f9-4a79-a2bf-e4276c1f3005" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.90624875 : 8.325); (10.90624875 : 10.475); (10.9088557291667 : 10.475 : JumpStart); (11.1848980208333 : 10.475 : JumpEnd); (11.875 : 10.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosFijo" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="b57c37be-221a-481b-8015-427d5429257b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.87499625 : 8.325); (9.87499625 : 12.475); (11.0182313541667 : 12.475 : JumpStart); (11.1848980208333 : 12.475 : JumpEnd); (11.875 : 12.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosNavideno" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="e5fcac2f-1b78-4819-8254-e4bd9b725a7d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.015624375 : 8.325); (11.015624375 : 12.975); (11.0182313541667 : 12.975 : JumpStart); (11.1848980208333 : 12.975 : JumpEnd); (11.875 : 12.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosaFuturo" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="d0ddd2a9-2959-41f7-b09f-b57b3719ea91" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 7.875); (11.875 : 7.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosaFuturoMulta" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="b3bc1be5-71a2-4593-ac6c-52b28713d2f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 8.0687525); (11.875 : 8.0687525)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosNavidenosMulta" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="0cb55595-48db-4d00-be1c-75002f69ab05" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 8.22812825); (11.5 : 8.22812825); (11.5 : 8.475); (11.875 : 8.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosCdt" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="15133901-64e4-4d95-a9e9-f3d67aaef38a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.796873125 : 8.325); (10.796873125 : 10.975); (11.0182313541667 : 10.975 : JumpStart); (11.1848980208333 : 10.975 : JumpEnd); (11.875 : 10.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosCdtMulta" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="d3924179-d01a-4ac2-8043-dc991f10a362" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.281246875 : 8.325); (10.281246875 : 11.475); (11.0182313541667 : 11.475 : JumpStart); (11.1848980208333 : 11.475 : JumpEnd); (11.875 : 11.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosVenta" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="bab66286-58ff-4e51-a1a2-acb550add2d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.468745625 : 8.325); (9.468745625 : 11.975); (9.79166291666667 : 11.975 : JumpStart); (9.95832958333333 : 11.975 : JumpEnd); (10.7994801041667 : 11.975 : JumpStart); (11.1848980208333 : 11.975 : JumpEnd); (11.875 : 11.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosOtrosIngreso" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="6b667ae2-c8e4-4f9a-a063-b4a04bde53a3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 8.325); (11.875 : 8.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosPrestamosAbono" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="6a8e1654-c486-4646-b2c3-658db1c5a655" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.1015646875 : 8.325); (11.1015646875 : 14.475); (11.875 : 14.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosCuota" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="aa3818c1-85cc-4362-9f6d-e7d517f95428" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.9921890625 : 8.325); (10.9921890625 : 13.975); (11.0182313541667 : 13.975 : JumpStart); (11.1848980208333 : 13.975 : JumpEnd); (11.875 : 13.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosPrestamo" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="94383741-56e7-4c6d-9299-1a89ec59f602" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="15e2e73d-aaea-4ea0-9d91-46027a16a059" isExpanded="false" absoluteBounds="7.125, 2, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCompra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3bca11c4-41d6-47e5-8e08-2a47457931a5" absoluteBounds="7.14, 2.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c42cde9c-3d9c-44c7-941c-4e65efd7cb0e" isExpanded="false" absoluteBounds="7.125, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblComprasDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98fdbfd0-b673-42e6-9486-78c1dbe73911" absoluteBounds="7.1400000000000006, 2.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.125 : 2.45); (8.125 : 2.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblCompra/tblCompra_tblComprasDetalle" />
+      <nodes>
+        <classShapeMoniker Id="15e2e73d-aaea-4ea0-9d91-46027a16a059" />
+        <classShapeMoniker Id="c42cde9c-3d9c-44c7-941c-4e65efd7cb0e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="879188fa-5a57-4a59-acf8-4bac594e5946" isExpanded="false" absoluteBounds="7.125, 3, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblDevolucione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a27c3df7-3db9-462d-853f-257c60d16b88" absoluteBounds="7.14, 3.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de37fb70-a5bf-4e4e-8e6a-73e2bd387494" isExpanded="false" absoluteBounds="7.125, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblNumerosRifa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f685143e-a6be-41be-9701-89785fef3164" absoluteBounds="7.14, 3.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ddebe01-dea9-4bab-b116-09d15adac8e2" isExpanded="false" absoluteBounds="7.125, 4, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblGrafico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2dfe3070-7417-4ca0-bcfd-9b560178e916" absoluteBounds="7.14, 4.46, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13a5a5b7-ebb9-4662-adfb-c6e0b9d28b0b" isExpanded="false" absoluteBounds="0.625, 15.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblCliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a5deb3d-15ce-452a-8441-115fc9dd84a6" absoluteBounds="0.64000000000000012, 15.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7a8df7e-276e-43fe-841b-94c115999df7" isExpanded="false" absoluteBounds="3.125, 14.875, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblDeuda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ef78823-61df-466a-aad8-96acea5baafe" absoluteBounds="3.14, 15.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.125 : 14.825); (4.125 : 14.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblServiciosSecundario/tblServiciosSecundario_tblDeuda" />
+      <nodes>
+        <classShapeMoniker Id="420d9cf7-5a8b-485a-a0bd-3ef92aa8cb49" />
+        <classShapeMoniker Id="d7a8df7e-276e-43fe-841b-94c115999df7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="68be4a02-1599-4187-ac0d-3b460a0e9853" isExpanded="false" absoluteBounds="5.5, 14.375, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblSociosPagosCuota" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a451b4e-8ba1-434c-876c-8ebc92e4a8e4" absoluteBounds="5.515, 14.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94fa9110-a18e-401b-ab3a-771e2eb9eb0b" isExpanded="false" absoluteBounds="5.5, 13.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblInformeMafre" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f98e7b7b-b6d2-4086-aef8-49f62eeeae46" absoluteBounds="5.515, 14.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8bdf9975-c952-4b1f-852a-4c58e271b23b" isExpanded="false" absoluteBounds="11.875, 13.25, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosDeuda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f623f0a9-18ec-41fd-9c80-78bb2c546c81" absoluteBounds="11.89, 13.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.8828134375 : 8.325); (10.8828134375 : 13.475); (10.9088557291667 : 13.475 : JumpStart); (11.1848980208333 : 13.475 : JumpEnd); (11.875 : 13.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosDeuda" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="8bdf9975-c952-4b1f-852a-4c58e271b23b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="07cffba8-6ff0-4f97-848d-75ca94d332db" isExpanded="false" absoluteBounds="3.125, 3.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAgraciado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11e8c05a-ca57-4117-8e1f-811f9991d843" absoluteBounds="3.14, 3.96, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86bd7596-ac7c-49f2-a646-6e0ae502af51" isExpanded="false" absoluteBounds="3.125, 4.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblFallecido" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8cdedbc6-2e25-4f8b-88fd-ef1ffd1ccf24" absoluteBounds="3.14, 4.96, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51dd7e8d-621a-4578-a32a-419d63ee60c8" isExpanded="false" absoluteBounds="3.125, 13.125, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblConfiguracione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18fd78eb-429b-4ee4-90b6-ae50b6bf54fd" absoluteBounds="3.14, 13.585, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5821cb6-6018-4f98-bc71-7ef2dda6960b" isExpanded="false" absoluteBounds="3.125, 12.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblQuincena" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa0b5f39-7b82-4c18-90fc-94fb3d6ce733" absoluteBounds="3.14, 12.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae2c2ba7-6671-414d-aba8-8e95953f7ae9" isExpanded="false" absoluteBounds="0.5, 7.5, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorradore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="833ebf84-a3e7-4a24-8869-29a7d679c9ca" absoluteBounds="0.51500000000000012, 7.9600000000000009, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a38a342a-a901-4776-8ded-46401a166f95" isExpanded="false" absoluteBounds="11.875, 9.25, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e20d005e-c14e-4005-9a06-eb3a7a563bc4" absoluteBounds="11.89, 9.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.7734378125 : 8.325); (10.7734378125 : 9.475); (11.0182313541667 : 9.475 : JumpStart); (11.1848980208333 : 9.475 : JumpEnd); (11.875 : 9.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorro" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="a38a342a-a901-4776-8ded-46401a166f95" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1b6d98c0-d9c3-4b21-a362-d8a760cc4518" isExpanded="false" absoluteBounds="6.125, 10.625, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosAhorro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89a7200b-11a2-44bb-abc1-b116bbaf68b9" absoluteBounds="6.14, 11.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.820316375 : 9.325); (4.820316375 : 11.5775426432292); (7.36561538461538 : 11.5775426432292); (7.36561538461538 : 11.075)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosAhorro" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="1b6d98c0-d9c3-4b21-a362-d8a760cc4518" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="20ff1ab9-5454-4d34-8f41-d18857e13130" isExpanded="false" absoluteBounds="3.125, 6, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosTransaccione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87e5f88d-805c-42fe-8ec0-16f0006e4b09" absoluteBounds="3.14, 6.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bb9a03d8-c347-412f-a39f-5822946401a6" isExpanded="false" absoluteBounds="6.125, 9.625, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosAhorrosNavidenoLiquidacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="885bbe85-c3b7-47a9-a694-8c5c368b1a53" absoluteBounds="6.14, 10.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 9.325); (6.125 : 9.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosAhorrosNavidenoLiquidacion" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="bb9a03d8-c347-412f-a39f-5822946401a6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f8795284-3e3b-4fe3-b3da-cf7b29713cbb" isExpanded="false" absoluteBounds="0.5, 3, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblSemana" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ba9fc94-de7a-4a92-b913-560bd470ec6c" absoluteBounds="0.51500000000000012, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d3e63f9-00ea-4af4-88c9-fbfbcf5f6b00" absoluteBounds="5.5, 15, 2, 7.5399397786458344">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblSocio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6269cfd3-d7df-4aa2-9421-73cf13a70733" absoluteBounds="5.515, 15.46, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="928d4afb-1fe9-4f2b-82ec-5aee391caf10" isExpanded="false" absoluteBounds="7.125, 4.625, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosNatilleraEscolar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67fd3d52-edf4-4721-bb4f-c9cfcc5e6e5a" absoluteBounds="7.14, 5.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8971ff59-49aa-4573-b812-4c0b002efe2a" isExpanded="false" absoluteBounds="7.125, 5.125, 2.5, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosNatilleraEscolarBonificacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d0f5a5c-41c4-489c-b823-9d022ff20419" absoluteBounds="7.14, 5.585, 2.4699999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8526684c-eb3c-4541-8e40-c3b0a5a09166" isExpanded="false" absoluteBounds="7.125, 5.625, 2.25, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblAhorrosNatilleraEscolarDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e30df17-5ac4-49c4-8a32-7aa3f57ee6a3" absoluteBounds="7.14, 6.085, 2.2199999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55826c44-3433-4a85-a680-270cb83466f9" isExpanded="false" absoluteBounds="11.875, 6.75, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblIngresosAhorrosNatilleraEscolar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd622a47-a072-42c1-afd8-3ed47e2d4941" absoluteBounds="11.89, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.125 : 7.875); (11.875 : 7.2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblIngreso/tblIngreso_tblIngresosAhorrosNatilleraEscolar" />
+      <nodes>
+        <classShapeMoniker Id="010c86c4-7c87-4941-8a08-901e7aa07378" />
+        <classShapeMoniker Id="55826c44-3433-4a85-a680-270cb83466f9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2746ed45-161a-4be1-92a2-3022fdd0e78b" isExpanded="false" absoluteBounds="6.125, 7.625, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblEgresosAhorrosNatilleraEscolarLiquidacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e50d0af-89a3-4e80-83d2-befae6f2ca26" absoluteBounds="6.1400000000000006, 8.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 8.875); (6.125 : 8.075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbExequial2010DataContext/tblEgreso/tblEgreso_tblEgresosAhorrosNatilleraEscolarLiquidacion" />
+      <nodes>
+        <classShapeMoniker Id="f9d96985-dfcc-46d6-bd7b-12f1b24ae7cf" />
+        <classShapeMoniker Id="2746ed45-161a-4be1-92a2-3022fdd0e78b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dc057233-34f3-4097-b2d1-e7b8b08f2bd7" isExpanded="false" absoluteBounds="5.5, 13, 2, 0.45">
+      <DataClassMoniker Name="/dbExequial2010DataContext/tblVenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bacd3661-0335-4c0a-8d2c-e8e7d5a295d7" absoluteBounds="5.515, 13.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

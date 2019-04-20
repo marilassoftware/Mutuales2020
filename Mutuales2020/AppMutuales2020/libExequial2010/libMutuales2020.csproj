@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E0F39A2-F175-429A-B2CE-A1618C77E6F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>libMutuales2020</RootNamespace>
+    <AssemblyName>libMutuales2020</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SeguridadWindows">
+      <HintPath>..\..\Andres Tabares\SeguridadWindows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dao\dao.cs" />
+    <Compile Include="dao\daoAhorrosaFuturo.cs" />
+    <Compile Include="dao\daoAhorrosaFuturoBonificacion.cs" />
+    <Compile Include="dao\daoAhorrosCdt.cs" />
+    <Compile Include="dao\daoAhorrosCdtCausacion.cs" />
+    <Compile Include="dao\daoAhorrosCdtLiquidacion.cs" />
+    <Compile Include="dao\daoAhorrosIntereses.cs" />
+    <Compile Include="dao\daoAhorrosNatilleraEscolar.cs" />
+    <Compile Include="dao\daoAhorrosNatilleraEscolarBonificacion.cs" />
+    <Compile Include="dao\daoAhorrosNavideno.cs" />
+    <Compile Include="dao\daoAhorrosNavidenoBonificacion.cs" />
+    <Compile Include="dao\daoCreditos.cs" />
+    <Compile Include="dao\daoCreditosClasificacion.cs" />
+    <Compile Include="dao\daoCreditosLinea.cs" />
+    <Compile Include="dao\daoGraficos.cs" />
+    <Compile Include="dao\daoMaestrosBarrio.cs" />
+    <Compile Include="dao\daoMaestrosCierredeMes.cs" />
+    <Compile Include="dao\daoMaestrosCuenta.cs" />
+    <Compile Include="dao\daoMaestrosMunicipio.cs" />
+    <Compile Include="dao\daoMaestrosOficio.cs" />
+    <Compile Include="dao\daoMaestrosOtroEgreso.cs" />
+    <Compile Include="dao\daoMaestrosOtroIngreso.cs" />
+    <Compile Include="dao\daoMaestrosPar.cs" />
+    <Compile Include="dao\daoMaestrosProducto.cs" />
+    <Compile Include="dao\daoMaestrosProvedor.cs" />
+    <Compile Include="dao\daoMaestrosSemana.cs" />
+    <Compile Include="dao\daoPersonasAgraciado.cs" />
+    <Compile Include="dao\daoPersonasAhorrador.cs" />
+    <Compile Include="dao\daoPersonasCliente.cs" />
+    <Compile Include="dao\daoPersonasFallecido.cs" />
+    <Compile Include="dao\daoPersonasSocio.cs" />
+    <Compile Include="dao\daoRecibosEgresos.cs" />
+    <Compile Include="dao\daoRecibosIngresos.cs" />
+    <Compile Include="dao\daoServiciosCompra.cs" />
+    <Compile Include="dao\daoServiciosDeudas.cs" />
+    <Compile Include="dao\daoServiciosPrimarios.cs" />
+    <Compile Include="dao\daoServiciosSecundarios.cs" />
+    <Compile Include="dao\daoServiciosVenta.cs" />
+    <Compile Include="dao\daoCreditosTipos.cs" />
+    <Compile Include="dao\daoUtilidadesConfiguracion.cs" />
+    <Compile Include="dao\daoUtilidadesInformeMafre.cs" />
+    <Compile Include="dominio\ahorrosAfuturo.cs" />
+    <Compile Include="dominio\ahorrosAfuturoBonificacion.cs" />
+    <Compile Include="dominio\ahorrosCdt.cs" />
+    <Compile Include="dominio\ahorrosCdtCausacion.cs" />
+    <Compile Include="dominio\ahorrosCdtLiquidacion.cs" />
+    <Compile Include="dominio\ahorrosAFuturoIntereses.cs" />
+    <Compile Include="dominio\ahorrosNatilleraEscolar.cs" />
+    <Compile Include="dominio\ahorrosNatilleraEscolarBonificacion.cs" />
+    <Compile Include="dominio\ahorrosNavidenoBonificacion.cs" />
+    <Compile Include="dominio\ahorrosNavidenoIntereses.cs" />
+    <Compile Include="dominio\ahorrosNavideño.cs" />
+    <Compile Include="dominio\CodigoValor.cs" />
+    <Compile Include="dominio\configuracionParametrosSql.cs" />
+    <Compile Include="dominio\creditosClasificacion.cs" />
+    <Compile Include="dominio\creditosCuota.cs" />
+    <Compile Include="dominio\creditosLinea.cs" />
+    <Compile Include="dominio\creditoss.cs" />
+    <Compile Include="dominio\maestrosBarrio.cs" />
+    <Compile Include="dominio\maestrosCierredeMes.cs" />
+    <Compile Include="dominio\maestrosCuenta.cs" />
+    <Compile Include="dominio\maestrosCuentaCredito.cs" />
+    <Compile Include="dominio\maestrosCuentaDebito.cs" />
+    <Compile Include="dominio\maestrosCuentaPar.cs" />
+    <Compile Include="dominio\dbExequial2010.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbExequial2010.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dominio\metodos.cs" />
+    <Compile Include="dominio\maestrosMunicipio.cs" />
+    <Compile Include="dominio\maestrosOficio.cs" />
+    <Compile Include="dominio\maestrosOtroEgreso.cs" />
+    <Compile Include="dominio\maestrosOtroIngreso.cs" />
+    <Compile Include="dominio\maestrosProducto.cs" />
+    <Compile Include="dominio\personasAgraciado.cs" />
+    <Compile Include="dominio\personasAhorradores.cs" />
+    <Compile Include="dominio\personasaModificar.cs" />
+    <Compile Include="dominio\personasCliente.cs" />
+    <Compile Include="dominio\personasFallecido.cs" />
+    <Compile Include="dominio\personasSocio.cs" />
+    <Compile Include="dominio\propiedades.cs" />
+    <Compile Include="dominio\maestrosProvedor.cs" />
+    <Compile Include="dominio\maestrosSemana.cs" />
+    <Compile Include="dominio\propiedadesExequial2010MutualJfr.cs" />
+    <Compile Include="dominio\recibosDatos.cs" />
+    <Compile Include="dominio\recibosEgresosAbonoaPretamos.cs" />
+    <Compile Include="dominio\recibosEgresosAhorroaFuturo.cs" />
+    <Compile Include="dominio\recibosEgresosAhorros.cs" />
+    <Compile Include="dominio\recibosEgresosAhorrosCdt.cs" />
+    <Compile Include="dominio\recibosEgresosAhorrosEstudiantes.cs" />
+    <Compile Include="dominio\recibosEgresosAhorrosFijos.cs" />
+    <Compile Include="dominio\recibosEgresosAhorrosNavideños.cs" />
+    <Compile Include="dominio\recibosEgresosEgresos.cs" />
+    <Compile Include="dominio\recibosEgresosIntereses.cs" />
+    <Compile Include="dominio\recibosEgresosSolos.cs" />
+    <Compile Include="dominio\recibosIngresosAbonoaVenta.cs" />
+    <Compile Include="dominio\recibosIngresosAbonosaPrestamo.cs" />
+    <Compile Include="dominio\recibosIngresosAhorros.cs" />
+    <Compile Include="dominio\recibosIngresosAhorrosaFuturo.cs" />
+    <Compile Include="dominio\recibosIngresosAhorrosCdt.cs" />
+    <Compile Include="dominio\recibosIngresosAhorrosEstudiantiles.cs" />
+    <Compile Include="dominio\recibosIngresosAhorrosFijos.cs" />
+    <Compile Include="dominio\recibosIngresosAhorrosNavidenos.cs" />
+    <Compile Include="dominio\recibosIngresosCuota.cs" />
+    <Compile Include="dominio\recibosIngresosDeudas.cs" />
+    <Compile Include="dominio\recibosIngresosOtrosIngresos.cs" />
+    <Compile Include="dominio\recibosIngresosPrestamos.cs" />
+    <Compile Include="dominio\recibosIngresosSolo.cs" />
+    <Compile Include="dominio\serviciosCompra.cs" />
+    <Compile Include="dominio\serviciosCompraDetalle.cs" />
+    <Compile Include="dominio\serviciosDeuda.cs" />
+    <Compile Include="dominio\serviciosDevolucion.cs" />
+    <Compile Include="dominio\serviciosPrimarios.cs" />
+    <Compile Include="dominio\serviciosSecundarios.cs" />
+    <Compile Include="dominio\serviciosVenta.cs" />
+    <Compile Include="dominio\creditosTipo.cs" />
+    <Compile Include="Facade\fAhorroNavidenoIntereses.cs" />
+    <Compile Include="Facade\fAhorrosaFuturo.cs" />
+    <Compile Include="Facade\fAhorrosaFuturoBonificacion.cs" />
+    <Compile Include="Facade\fAhorrosaFuturoIntereses.cs" />
+    <Compile Include="Facade\fAhorrosCdt.cs" />
+    <Compile Include="Facade\fAhorrosCdtCausacion.cs" />
+    <Compile Include="Facade\fAhorrosCdtLiquidacion.cs" />
+    <Compile Include="Facade\fAhorrosIntereses.cs" />
+    <Compile Include="Facade\fAhorrosNatilleraEscolar.cs" />
+    <Compile Include="Facade\fAhorrosNavideno.cs" />
+    <Compile Include="Facade\fAhorrosNavidenoBonificacion.cs" />
+    <Compile Include="Facade\fAhorrosNavidenoIntereses.cs" />
+    <Compile Include="Facade\fServiciosCompras.cs" />
+    <Compile Include="Facade\fMaestrosCuentaPar.cs" />
+    <Compile Include="Facade\fMaestrosCuenta.cs" />
+    <Compile Include="Facade\fMaestrosBarrio.cs" />
+    <Compile Include="Facade\fConfiguracion.cs" />
+    <Compile Include="Facade\fCreditos.cs" />
+    <Compile Include="Facade\fCreditosClasificacion.cs" />
+    <Compile Include="Facade\fCreditosLinea.cs" />
+    <Compile Include="Facade\fCreditosTipo.cs" />
+    <Compile Include="Facade\fGraficos.cs" />
+    <Compile Include="Facade\fMaestrosCierredeMes.cs" />
+    <Compile Include="Facade\fMaestrosMunicipio.cs" />
+    <Compile Include="Facade\fMaestrosOficio.cs" />
+    <Compile Include="Facade\fMaestrosOtroEgreso.cs" />
+    <Compile Include="Facade\fMaestrosOtroIngreso.cs" />
+    <Compile Include="Facade\fMaestrosProducto.cs" />
+    <Compile Include="Facade\fMaestrosProvedor.cs" />
+    <Compile Include="Facade\fMaestrosSemana.cs" />
+    <Compile Include="Facade\fPersonasAgraciados.cs" />
+    <Compile Include="Facade\fPersonasAhorrador.cs" />
+    <Compile Include="Facade\fPersonasCliente.cs" />
+    <Compile Include="Facade\fPersonasFallecidos.cs" />
+    <Compile Include="Facade\fPersonasSocio.cs" />
+    <Compile Include="Facade\fRecibosEgresos.cs" />
+    <Compile Include="Facade\fRecibosIngresos.cs" />
+    <Compile Include="Facade\fRecibosIngresosAhorros.cs" />
+    <Compile Include="Facade\fRecibosIngresosPrestamos.cs" />
+    <Compile Include="Facade\fServiciosDeudas.cs" />
+    <Compile Include="Facade\fServiciosPrimarios.cs" />
+    <Compile Include="Facade\fServiciosSecundarios.cs" />
+    <Compile Include="Facade\fServiciosVentas.cs" />
+    <Compile Include="Facade\fUtilidadesInformeMafre.cs" />
+    <Compile Include="logica\blAhorroNatilleraEscolarIntereses.cs" />
+    <Compile Include="logica\blAhorrosNatilleraEscolar.cs" />
+    <Compile Include="logica\blAhorroNavidenoIntereses.cs" />
+    <Compile Include="logica\blAhorrosaFuturo.cs" />
+    <Compile Include="logica\blAhorrosaFuturoBonificacion.cs" />
+    <Compile Include="logica\blAhorrosaFuturoIntereses.cs" />
+    <Compile Include="logica\blAhorrosCdt.cs" />
+    <Compile Include="logica\blAhorrosCdtCausacion.cs" />
+    <Compile Include="logica\blAhorrosCdtLiquidacion.cs" />
+    <Compile Include="logica\blAhorrosIntereses.cs" />
+    <Compile Include="logica\blAhorrosNavidenoBonificacion.cs" />
+    <Compile Include="logica\blAhorrosNavideno.cs" />
+    <Compile Include="logica\blAhorrosNavidenoIntereses.cs" />
+    <Compile Include="logica\blConfiguracion.cs" />
+    <Compile Include="logica\blCreditosClasificacion.cs" />
+    <Compile Include="logica\blCreditosLinea.cs" />
+    <Compile Include="logica\blCreditos.cs" />
+    <Compile Include="logica\blGraficos.cs" />
+    <Compile Include="logica\blMaestrosBarrio.cs" />
+    <Compile Include="logica\blMaestrosCierredeMes.cs" />
+    <Compile Include="logica\blMaestrosCuenta.cs" />
+    <Compile Include="logica\blMaestrosCuentaPar.cs" />
+    <Compile Include="logica\blMaestrosMunicipio.cs" />
+    <Compile Include="logica\blMaestrosOficio.cs" />
+    <Compile Include="logica\blMaestrosOtroEgreso.cs" />
+    <Compile Include="logica\blMaestrosOtroIngreso.cs" />
+    <Compile Include="logica\blMaestrosProducto.cs" />
+    <Compile Include="logica\blMaestrosProvedor.cs" />
+    <Compile Include="logica\blMaestrosSemana.cs" />
+    <Compile Include="logica\blCreditosTipo.cs" />
+    <Compile Include="logica\blPersonasAgraciado.cs" />
+    <Compile Include="logica\blPersonasAhorrador.cs" />
+    <Compile Include="logica\blPersonasCliente.cs" />
+    <Compile Include="logica\blPersonasFallecidos.cs" />
+    <Compile Include="logica\blPersonasSocio.cs" />
+    <Compile Include="logica\blRecibosEgresos.cs" />
+    <Compile Include="logica\blRecibosIngresosAhorrosalaVista.cs" />
+    <Compile Include="logica\blRecibosIngresosPrestamos.cs" />
+    <Compile Include="logica\blRecibosIngresos.cs" />
+    <Compile Include="logica\blServiciosCompras.cs" />
+    <Compile Include="logica\blServiciosDeudas.cs" />
+    <Compile Include="logica\blServiciosPrimarios.cs" />
+    <Compile Include="logica\blServiciosSecundarios.cs" />
+    <Compile Include="logica\blServiciosVentas.cs" />
+    <Compile Include="logica\blUtilidadesInformeMafre.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\Sp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sp.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Utilidades\comprimirDescomprimir.cs" />
+    <Compile Include="Utilidades\enLetras.cs" />
+    <Compile Include="Utilidades\Respuesta.cs" />
+    <Compile Include="Utilidades\Utilidad.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dominio\dbExequial2010.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbExequial2010.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dominio\dbExequial2010.dbml.layout">
+      <DependentUpon>dbExequial2010.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\Sp.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sp.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
