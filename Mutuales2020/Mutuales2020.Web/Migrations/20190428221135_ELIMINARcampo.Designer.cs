@@ -10,8 +10,8 @@ using Mutuales2020.Web.Data;
 namespace Mutuales2020.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190424202516_initialdb")]
-    partial class initialdb
+    [Migration("20190428221135_ELIMINARcampo")]
+    partial class ELIMINARcampo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -131,11 +131,13 @@ namespace Mutuales2020.Web.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Mutuales2020.Web.Data.Entities.Afiliado", b =>
+            modelBuilder.Entity("Mutuales2020.Web.Data.Entities.Affiliate", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("dtmFechaActualizacion");
 
                     b.Property<int>("intAnoAfi");
 
@@ -143,11 +145,24 @@ namespace Mutuales2020.Web.Migrations
 
                     b.Property<int>("intMesAfi");
 
-                    b.Property<string>("strApellidoAfi");
+                    b.Property<string>("strApellido1Afi")
+                        .IsRequired()
+                        .HasMaxLength(100);
 
-                    b.Property<string>("strCodigoMut");
+                    b.Property<string>("strApellido2Afi")
+                        .IsRequired()
+                        .HasMaxLength(100);
 
-                    b.Property<string>("strNombreAfi");
+                    b.Property<string>("strCodigoMut")
+                        .IsRequired();
+
+                    b.Property<string>("strNombreAfi")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<string>("strPlanAfi")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 

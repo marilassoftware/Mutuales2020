@@ -10,8 +10,8 @@ using Mutuales2020.Web.Data;
 namespace Mutuales2020.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190425014707_camposrequeridos")]
-    partial class camposrequeridos
+    [Migration("20190429004751_cedula")]
+    partial class cedula
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -137,15 +137,25 @@ namespace Mutuales2020.Web.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("dtmFechaActualizacion");
+
                     b.Property<int>("intAnoAfi");
 
                     b.Property<int>("intCodigoSoc");
 
                     b.Property<int>("intMesAfi");
 
-                    b.Property<string>("strApellidoAfi")
+                    b.Property<string>("strApellido1Afi")
                         .IsRequired()
                         .HasMaxLength(100);
+
+                    b.Property<string>("strApellido2Afi")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<string>("strCedulaAfi")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
                     b.Property<string>("strCodigoMut")
                         .IsRequired();
@@ -153,6 +163,10 @@ namespace Mutuales2020.Web.Migrations
                     b.Property<string>("strNombreAfi")
                         .IsRequired()
                         .HasMaxLength(100);
+
+                    b.Property<string>("strPlanAfi")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 

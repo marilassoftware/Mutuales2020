@@ -64,7 +64,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SeguridadWindows">
-      <HintPath>..\..\Andres Tabares\SeguridadWindows.dll</HintPath>
+      <HintPath>..\..\..\..\..\Andres Tabares\SeguridadWindows.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

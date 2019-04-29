@@ -1,7 +1,9 @@
 ﻿namespace Mutuales2020.Web.Data
 {
+    using Mutuales2020.DataAccess.Utilidades;
     //using Common.Models;
     using Mutuales2020.Web.Data.Entities;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -28,6 +30,13 @@
         public void AddAffiliate(Affiliate product)
         {
             this.context.Afiliado.Add(product);
+        }
+
+        public String AddAffiliateSp(String strInformacion)
+        {
+            StoreProcedure sp = new StoreProcedure();
+            var Resultado = sp.ExcecuteSp("uspAffiliateInformationInsert", strInformacion);
+            return Resultado;
         }
 
         public void UpdateAffiliate(Affiliate product)

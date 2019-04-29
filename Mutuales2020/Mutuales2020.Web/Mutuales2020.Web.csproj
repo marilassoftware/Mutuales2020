@@ -11,8 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\API\" />
     <Folder Include="Data\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mutuales2020.Common\Mutuales2020.Common.csproj" />
+    <ProjectReference Include="..\Mutuales2020.DataAccess\Mutuales2020.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

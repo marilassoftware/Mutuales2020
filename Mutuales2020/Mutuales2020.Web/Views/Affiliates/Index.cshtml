@@ -24,13 +24,16 @@
                     <thead>
                         <tr>
                             <th>
-                                @Html.DisplayNameFor(model => model.intCodigoSoc)
+                                @Html.DisplayNameFor(model => model.intCodigoAfi)
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.strNombreAfi)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.strApellidoAfi)
+                                @Html.DisplayNameFor(model => model.strApellido1Afi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.strApellido2Afi)
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.intAnoAfi)
@@ -47,31 +50,34 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.intCodigoSoc)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.strNombreAfi)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.strApellidoAfi)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.intAnoAfi)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.intMesAfi)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.strCodigoMut)
-                                </td>
-                                <td>
-                                    @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.intCodigoAfi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.strNombreAfi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.strApellido1Afi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.strApellido2Afi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.intAnoAfi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.intMesAfi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.strCodigoMut)
+                            </td>
+                            <td>
+                                @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>
