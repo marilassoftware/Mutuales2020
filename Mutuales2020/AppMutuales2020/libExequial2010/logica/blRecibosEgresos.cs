@@ -83,23 +83,9 @@
         /// <summary> Consulta los datos de un determinado egreso. </summary>
         /// <param name="tintRecibo"> Código del egreso a consultar. </param>
         /// <returns> Retorna los datos del egreso. </returns>
-        public string gmtdEliminarEgreso(tblEgreso tobjEgreso)
+        public string gmtdEliminarEgreso(Int32 intCodigoEgr)
         {
-            tobjEgreso.dtmFechaAnu = new blConfiguracion().gmtdCapturarFechadelServidor();
-
-            tblAhorradore ahorrador = new daoAhorrador().gmtdConsultar(tobjEgreso.strCedulaEgre);
-
-            if (tobjEgreso.egresoAhorroalaVista != null)
-                tobjEgreso.egresoAhorroalaVista.decAhorrado = ahorrador.decAhorrado;
-
-            if (tobjEgreso.egresoAhorroEstudiantil != null)
-                tobjEgreso.egresoAhorroEstudiantil.decAhorrado = ahorrador.decAhorrosEstudiantes;
-
-            if (tobjEgreso.egresoAhorroFijo != null)
-                tobjEgreso.egresoAhorroFijo.decAhorrado = ahorrador.decAhorrosFijo;
-
-
-            return new daoRecibosEgresos().gmtdEliminarEgreso(tobjEgreso);
+            return new daoRecibosEgresos().gmtdEliminarEgreso(intCodigoEgr);
         }
 
         /// <summaiy> Imprimir recibos. </summary>

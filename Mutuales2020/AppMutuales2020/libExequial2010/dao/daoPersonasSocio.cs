@@ -2,9 +2,13 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SqlClient;
     using System.Linq;
     using System.Transactions;
     using libMutuales2020.dominio;
+    using libMutuales2020.Recursos;
+    using libMutuales2020.Utilidades;
 
     public class daoSocio
     {
@@ -143,32 +147,74 @@
         /// <returns> Un string que indica si se ejecuto o no la operación. </returns>
         public string gmtdNuevoAño(tblSocio tobjSocio, tblLogNuevoAño tobjNuevoAño)
         {
-            String strResultado;
+            String strRetornar;
             try
             {
-                using (TransactionScope ts = new TransactionScope())
-                {
-                    using (dbExequial2010DataContext socio = new dbExequial2010DataContext())
-                    {
-                        tblSocio soc_old = socio.tblSocios.SingleOrDefault(p => p.intCodigoSoc == tobjSocio.intCodigoSoc);
-                        soc_old.intAño = tobjSocio.intAño;
-                        soc_old.intMeses = tobjSocio.intMeses;
-                        soc_old.strCodServiciop = tobjSocio.strCodServiciop;
-                        //socio.tblLogdeActividade2s.InsertOnSubmit(tobjSocio.log);
-                        socio.SubmitChanges();
-                        socio.tblLogNuevoAños.InsertOnSubmit(tobjNuevoAño);
-                        socio.SubmitChanges();
-                    }
-                    ts.Complete();
-                    strResultado = "Registro Actualizado";
-                }
+                List<SqlParameter> lstParametros = new List<SqlParameter>();
+                SqlParameter objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intAno";
+                objParameter.Value = tobjSocio.intAño;
+                lstParametros.Add(objParameter);
+
+                objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intAnoAnt";
+                objParameter.Value = tobjNuevoAño.intAñoAnterior;
+                lstParametros.Add(objParameter);
+
+                objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intMes";
+                objParameter.Value = tobjNuevoAño.intMesNuevo;
+                lstParametros.Add(objParameter);
+
+                objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intMesAnt";
+                objParameter.Value = tobjNuevoAño.intMesAnterior;
+                lstParametros.Add(objParameter);
+
+                objParameter = new SqlParameter();
+                objParameter.DbType = DbType.String;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "strCodServiciop";
+                objParameter.Value = tobjNuevoAño.strServicioNuevo;
+                lstParametros.Add(objParameter);
+
+                objParameter = new SqlParameter();
+                objParameter.DbType = DbType.String;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "strCodServiciopAnt";
+                objParameter.Value = tobjNuevoAño.strServicioAnterior;
+                lstParametros.Add(objParameter);
+
+                objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intCodigoSoc";
+                objParameter.Value = tobjNuevoAño.intCodigoSoc;
+                lstParametros.Add(objParameter);
+
+                objParameter = new SqlParameter();
+                objParameter.DbType = DbType.String;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "Usuario";
+                objParameter.Value = tobjNuevoAño.strUsuario;
+                lstParametros.Add(objParameter);
+
+                return new Utilidad().ejecutarSpConeccionDB(lstParametros, Sp.spNuevoAno).Rows[0]["intCodigo"].ToString();
             }
             catch (Exception ex)
             {
                 new dao().gmtdInsertarError(ex);
-                strResultado = "- Ocurrió un error al Actualizar el registro";
+                strRetornar = "0";
             }
-            return strResultado;
+            return strRetornar;
         }
 
         /// <summary> Consulta si un número de cedula ya aparece registrado. </summary>

@@ -116,123 +116,25 @@ namespace libMutuales2020.dao
         /// <summary> Consulta los datos de un determinado egreso. </summary>
         /// <param name="tintRecibo"> Código del egreso a consultar. </param>
         /// <returns> Retorna los datos del egreso. </returns>
-        public string gmtdEliminarEgreso(tblEgreso tobjEgreso)
+        public string gmtdEliminarEgreso(Int32 intCodigoEgr)
         {
-            String strRetornar;
             try
             {
-                using (TransactionScope ts = new TransactionScope())
-                {
-                    using (dbExequial2010DataContext recibosEgresos = new dbExequial2010DataContext())
-                    {
-                        tblEgreso egr = recibosEgresos.tblEgresos.SingleOrDefault(p => p.intCodigoEgr == tobjEgreso.intCodigoEgr);
-                        egr.bitAnulado = true;
-                        egr.dtmFechaAnu = tobjEgreso.dtmFechaAnu;
+                List<SqlParameter> lstParametros = new List<SqlParameter>();
+                SqlParameter objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intCodigoEgr";
+                objParameter.Value = intCodigoEgr;
+                lstParametros.Add(objParameter);
 
-                        if (tobjEgreso.bitRetiro == true)
-                        {
-                            tblAhorradore cre = recibosEgresos.tblAhorradores.SingleOrDefault(p => p.strCedulaAho == tobjEgreso.strCedulaEgre);
-                            cre.decAhorrado += tobjEgreso.egresoAhorroalaVista.decRetiro;
-                        }
-
-                        if (tobjEgreso.bitRetiroAbonos == true)
-                        {
-                            tblCredito cre = recibosEgresos.tblCreditos.SingleOrDefault(p => p.intCodigoCre == tobjEgreso.egresoAbonoaPrestamo.intCodigoCre);
-                            cre.decAbono += tobjEgreso.egresoAbonoaPrestamo.decAbonoPrestamo;
-                        }
-
-                        if (tobjEgreso.bitRetiroAhorroEstudiante == true)
-                        {
-                            tblAhorradore cre = recibosEgresos.tblAhorradores.SingleOrDefault(p => p.strCedulaAho == tobjEgreso.strCedulaEgre);
-                            cre.decAhorrosEstudiantes += tobjEgreso.egresoAhorroEstudiantil.decRetiro;
-                        }
-
-                        if (tobjEgreso.bitRetiroAhorroFijo == true)
-                        {
-                            tblAhorradore cre = recibosEgresos.tblAhorradores.SingleOrDefault(p => p.strCedulaAho == tobjEgreso.strCedulaEgre);
-                            cre.decAhorrosFijo += tobjEgreso.egresoAhorroFijo.decRetiro;
-                        }
-
-                        if (tobjEgreso.bitRetiroIntereses == true)
-                        {
-                            tblAhorradore cre = recibosEgresos.tblAhorradores.SingleOrDefault(p => p.strCedulaAho == tobjEgreso.strCedulaEgre);
-                            cre.decIntereses += tobjEgreso.egresoIntereses.decIntereses;
-                        }
-
-                        recibosEgresos.SubmitChanges();
-
-                        tobjEgreso.log = metodos.gmtdLog("Elimina el egreso " + tobjEgreso.intCodigoEgr.ToString(), tobjEgreso.strFormulario);
-                        recibosEgresos.tblLogdeActividades.InsertOnSubmit(tobjEgreso.log);
-
-                        if (tobjEgreso.egresoAhorroalaVista != null)
-                        {
-                            tblAhorrosTransaccione tra = recibosEgresos.tblAhorrosTransacciones.SingleOrDefault(p => p.intCodigoIng == tobjEgreso.intCodigoEgr);
-                            tra.bitMuestra = false;
-
-                            tblAhorrosTransaccione transaccion = new tblAhorrosTransaccione();
-                            transaccion.bitMuestra = false;
-                            transaccion.decAcumula = tobjEgreso.egresoAhorroalaVista.decAhorrado + tobjEgreso.egresoAhorroalaVista.decRetiro;
-                            transaccion.decAhorrado = tobjEgreso.egresoAhorroalaVista.decAhorrado;
-                            transaccion.decValor = tobjEgreso.egresoAhorroalaVista.decRetiro;
-                            transaccion.dtmFechaTra = tobjEgreso.dtmFechaAnu;
-                            transaccion.intCodigoIng = tobjEgreso.intCodigoEgr;
-                            transaccion.strCedulaAho = tobjEgreso.strCedulaEgre;
-                            transaccion.strDescripcion = "Comprobante # " + tobjEgreso.intCodigoEgr.ToString();
-                            transaccion.strTransaccion = "Ahorro";
-                            recibosEgresos.tblAhorrosTransacciones.InsertOnSubmit(transaccion);
-
-                        }
-
-                        if (tobjEgreso.egresoAhorroEstudiantil != null)
-                        {
-                            tblAhorrosTransaccionesEstudiantil tra = recibosEgresos.tblAhorrosTransaccionesEstudiantils.SingleOrDefault(p => p.intCodigoIng == tobjEgreso.intCodigoEgr);
-                            tra.bitMuestra = false;
-
-                            tblAhorrosTransaccionesEstudiantil transaccion = new tblAhorrosTransaccionesEstudiantil();
-                            transaccion.bitMuestra = false;
-                            transaccion.decAcumula = tobjEgreso.egresoAhorroEstudiantil.decAcumula + tobjEgreso.egresoAhorroEstudiantil.decRetiro;
-                            transaccion.decAhorrado = tobjEgreso.egresoAhorroEstudiantil.decAhorrado;
-                            transaccion.decValor = tobjEgreso.egresoAhorroEstudiantil.decRetiro;
-                            transaccion.dtmFechaTra = tobjEgreso.dtmFechaAnu;
-                            transaccion.intCodigoIng = tobjEgreso.intCodigoEgr;
-                            transaccion.strCedulaAho = tobjEgreso.strCedulaEgre;
-                            transaccion.strDescripcion = "Comprobante # " + tobjEgreso.intCodigoEgr.ToString();
-                            transaccion.strTransaccion = "Ahorro";
-
-                            recibosEgresos.tblAhorrosTransaccionesEstudiantils.InsertOnSubmit(transaccion);
-                        }
-
-                        if (tobjEgreso.egresoAhorroFijo != null)
-                        {
-                            tblAhorrosTransaccionesFijo tra = recibosEgresos.tblAhorrosTransaccionesFijos.SingleOrDefault(p => p.intCodigoIng == tobjEgreso.intCodigoEgr);
-                            tra.bitMuestra = false;
-
-                            tblAhorrosTransaccionesFijo transaccion = new tblAhorrosTransaccionesFijo();
-                            transaccion.bitMuestra = false;
-                            transaccion.decAcumula = tobjEgreso.egresoAhorroFijo.decAcumula - tobjEgreso.egresoAhorroFijo.decRetiro;
-                            transaccion.decAhorrado = tobjEgreso.egresoAhorroFijo.decAhorrado;
-                            transaccion.decValor = tobjEgreso.egresoAhorroFijo.decRetiro;
-                            transaccion.dtmFechaTra = tobjEgreso.dtmFechaAnu;
-                            transaccion.intCodigoIng = tobjEgreso.intCodigoEgr;
-                            transaccion.strCedulaAho = tobjEgreso.strCedulaEgre;
-                            transaccion.strDescripcion = "Comprobante # " + tobjEgreso.intCodigoEgr.ToString();
-                            transaccion.strTransaccion = "Ahorro";
-
-                            recibosEgresos.tblAhorrosTransaccionesFijos.InsertOnSubmit(transaccion);
-                        }
-
-                        recibosEgresos.SubmitChanges();
-                    }
-                    ts.Complete();
-                    strRetornar = "Registro Insertado";
-                }
+                return new Utilidad().ejecutarSpConeccionDB(lstParametros, Sp.spEgresoEliminar).Rows[0]["intCodigoEgr"].ToString();
             }
             catch (Exception ex)
             {
                 new dao().gmtdInsertarError(ex);
-                strRetornar = "- No se puede eliminar el registro.";
+                return "- Ocurrió un error al insertar el registro.";
             }
-            return strRetornar;
         }
 
         /// <summaiy> Imprimir recibos. </summary>

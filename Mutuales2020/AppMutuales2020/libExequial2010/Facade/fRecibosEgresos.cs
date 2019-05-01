@@ -28,9 +28,9 @@
         /// <summary> Consulta los datos de un determinado egreso. </summary>
         /// <param name="tintRecibo"> Código del egreso a consultar. </param>
         /// <returns> Retorna los datos del egreso. </returns>
-        public string gmtdEliminarEgreso(tblEgreso tobjEgreso)
+        public string gmtdEliminarEgreso(int tintCodigoEgr)
         {
-            return new blRecibosEgresos().gmtdEliminarEgreso(tobjEgreso);
+            return new blRecibosEgresos().gmtdEliminarEgreso(tintCodigoEgr);
         }
 
         /// <summaiy> Imprimir recibos. </summary>

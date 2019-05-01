@@ -561,7 +561,7 @@
         <CanGrow>true</CanGrow>
         <Left>4.79167in</Left>
         <Height>0.2in</Height>
-        <Value>=First(Fields!decAcumula1.Value)</Value>
+        <Value>=First(Fields!decAcumula.Value)</Value>
       </Textbox>
       <Textbox Name="textbox9">
         <Top>1.13542in</Top>
@@ -596,7 +596,7 @@
         <CanGrow>true</CanGrow>
         <Left>3.02083in</Left>
         <Height>0.2in</Height>
-        <Value>=First(Fields!decGranTotal.Value)</Value>
+        <Value>=First(Fields!decValor.Value)</Value>
       </Textbox>
       <Textbox Name="textbox7">
         <Top>1.13542in</Top>
@@ -613,7 +613,7 @@
         <CanGrow>true</CanGrow>
         <Left>2.14583in</Left>
         <Height>0.2in</Height>
-        <Value>=Parameters!Transaccion.Value</Value>
+        <Value>=First(Fields!strTransaccion.Value)</Value>
       </Textbox>
       <Textbox Name="textbox6">
         <Top>1.13542in</Top>
@@ -630,7 +630,7 @@
         <CanGrow>true</CanGrow>
         <Left>1in</Left>
         <Height>0.2in</Height>
-        <Value>=Parameters!SaldoAnterior.Value</Value>
+        <Value>=First(Fields!decSaldoAnt.Value)</Value>
       </Textbox>
       <Textbox Name="textbox5">
         <Top>1.13542in</Top>

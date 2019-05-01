@@ -819,5 +819,14 @@
       <Name>libMutuales2020</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Despliegues\2020.1\01 - tblSociosProcesados.Sql" />
+    <Content Include="Despliegues\2020.1\02 - spImprimirReciboTransacciones.Sql" />
+    <Content Include="Despliegues\2020.1\03 - spReporteTransacciones06TransaccionesRegistradasdeunahorradorenunrangodeFecha.Sql" />
+    <Content Include="Despliegues\2020.1\04 - spIngresoInsertar.sql" />
+    <Content Include="Despliegues\2020.1\05 - spIngresoEliminar.Sql" />
+    <Content Include="Despliegues\2020.1\06 - spEgresoEliminar.Sql" />
+    <Content Include="Despliegues\2020.1\07 - spNuevoAno.Sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

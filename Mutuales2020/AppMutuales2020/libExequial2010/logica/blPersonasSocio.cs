@@ -386,7 +386,18 @@
         /// <returns> Un string que indica si se ejecuto o no la operación. </returns>
         public string gmtdNuevoAño(tblSocio tobjSocio, tblLogNuevoAño tobjNuevoAño)
         {
-            return new daoSocio().gmtdNuevoAño(tobjSocio, tobjNuevoAño);
+            String Respuesta =  new daoSocio().gmtdNuevoAño(tobjSocio, tobjNuevoAño);
+
+            if(Respuesta == "1")
+            {
+                Respuesta = "Registro actualizado.";
+            }
+            else
+            {
+                Respuesta = "- La operacion no se pudo realizar.";
+            }
+
+            return Respuesta;
         }
     }
 }

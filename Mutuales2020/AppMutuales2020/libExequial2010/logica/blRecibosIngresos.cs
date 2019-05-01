@@ -290,7 +290,10 @@
                     return "- No se puede eliminar un recibo de un año diferente al actual del socio.";
                     break;
                 case "0":
-                    return "- No se puede realizar la operación";
+                    return "- No se puede realizar la operación.";
+                    break;
+                case "1":
+                    return "Registro anulado.";
                     break;
             }
 

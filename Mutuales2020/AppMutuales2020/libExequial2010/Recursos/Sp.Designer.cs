@@ -61,6 +61,15 @@ namespace libMutuales2020.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a spEgresoEliminar.
+        /// </summary>
+        internal static string spEgresoEliminar {
+            get {
+                return ResourceManager.GetString("spEgresoEliminar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a spEgresoInsertar.
         /// </summary>
         internal static string spEgresoInsertar {
@@ -84,6 +93,15 @@ namespace libMutuales2020.Recursos {
         internal static string spIngresoInsertar {
             get {
                 return ResourceManager.GetString("spIngresoInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a spNuevoAno.
+        /// </summary>
+        internal static string spNuevoAno {
+            get {
+                return ResourceManager.GetString("spNuevoAno", resourceCulture);
             }
         }
         

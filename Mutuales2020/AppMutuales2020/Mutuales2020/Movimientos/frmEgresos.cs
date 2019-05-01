@@ -1108,11 +1108,19 @@
                 return;
             }
 
-
             DialogResult dlgResult = MessageBox.Show("Confirma que desea eliminar este registro? ", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dlgResult == DialogResult.Yes)
             {
-                this.pmtdMensaje(new blRecibosEgresos().gmtdEliminarEgreso(egresoConsultado), "Egresos");
+                this.pmtdMensaje(new blRecibosEgresos().gmtdEliminarEgreso(Convert.ToInt32(this.txtEgreso.Text)), "Egresos");
+            }
+
+            if (this.chkRetirar.Checked && !this.chkIntereses.Checked)
+            {
+                this.gmtdMostrarReciboTransacciones();
+            }
+            else
+            {
+                this.gmtdMostrarReciboEgreso();
             }
 
             this.pmtdHabilitarControles(false);
