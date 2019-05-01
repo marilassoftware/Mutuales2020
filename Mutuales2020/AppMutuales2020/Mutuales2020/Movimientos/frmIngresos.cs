@@ -1538,7 +1538,7 @@
                 DialogResult dlgResult = MessageBox.Show("Confirma que desea eliminar este registro? ", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dlgResult == DialogResult.Yes)
                 {
-                    this.pmtdMensaje(new blRecibosIngresos().gmtdEliminar(ingresoConsultado), "Ingresos");
+                    this.pmtdMensaje(new blRecibosIngresos().gmtdEliminar(Convert.ToInt32(this.txtIngreso.Text)), "Ingresos");
                 }
 
                 if (ingresoConsultado.bitAhorro)
@@ -2345,6 +2345,7 @@
         {
             if (e.KeyChar == (char)13)
             {
+                this.btnAnulado.Visible = false;
                 ingresoConsultado = new blRecibosIngresos().gmtdConsultaIngreso(Convert.ToInt32(this.txtIngreso.Text));
                 //this.pmtdLimpiarControles();
                 if (ingresoConsultado.strNombreIng != null)

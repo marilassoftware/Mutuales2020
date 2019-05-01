@@ -576,199 +576,25 @@
         /// <summary> Elimina un recibo de ingreso. </summary>
         /// <param name="tobjIngreso"> Un objeto del tipo ingreso. </param>
         /// <returns> Un string que indica si se ejecuto o no la operación. </returns>
-        public string gmtdEliminar(tblIngreso tobjIngreso)
+        public string gmtdEliminar(int intCodigoIng)
         {
             String strRetornar;
             try
             {
-                using (TransactionScope ts = new TransactionScope())
-                {
-                    using (dbExequial2010DataContext recibosIngresos = new dbExequial2010DataContext())
-                    {
-                        tblIngreso ing = recibosIngresos.tblIngresos.SingleOrDefault(p => p.intCodigoIng == tobjIngreso.intCodigoIng);
-                        ing.bitAnulado = true;
-                        ing.dtmFechaAnu = tobjIngreso.dtmFechaAnu;
+                List<SqlParameter> lstParametros = new List<SqlParameter>();
+                SqlParameter objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intCodigoIng";
+                objParameter.Value = intCodigoIng;
+                lstParametros.Add(objParameter);
 
-                        if (tobjIngreso.ingresoCuota != null)
-                        {
-                            tblSocio soc = recibosIngresos.tblSocios.SingleOrDefault(p => p.intCodigoSoc == tobjIngreso.ingresoCuota.intCodigoSoc);
-                            soc.intMeses -= tobjIngreso.ingresoCuota.intCantidad;
-                        }
-
-                        if (tobjIngreso.ingresoPrestamo != null)
-                        {
-                            for (int a = 0; a < tobjIngreso.ingresoPrestamo.Count; a++)
-                            {
-                                tblCredito cre = recibosIngresos.tblCreditos.SingleOrDefault(p => p.intCodigoCre == tobjIngreso.ingresoPrestamo[a].intCodigoPre);
-                                cre.decDebe += tobjIngreso.ingresoPrestamo[a].decCapital;
-
-                                tblCreditosCuota cuo = recibosIngresos.tblCreditosCuotas.SingleOrDefault(p => p.intCodigoCre == tobjIngreso.ingresoPrestamo[a].intCodigoPre && p.intCuota == tobjIngreso.ingresoPrestamo[a].intCuota);
-                                cuo.bitPagada = false;
-                                cuo.dtmFechaPago = Convert.ToDateTime("1/1/1900");
-                            }
-                        }
-
-                        if (tobjIngreso.ingresoAhorro != null)
-                        {
-                            tblAhorradore aho = recibosIngresos.tblAhorradores.SingleOrDefault(p => p.strCedulaAho == tobjIngreso.strCedulaIng);
-                            aho.decAhorrado -= tobjIngreso.ingresoAhorro.decAhorro;
-                        }
-
-                        if (tobjIngreso.ingresoAhorroEstudiantil != null)
-                        {
-                            tblAhorradore aho = recibosIngresos.tblAhorradores.SingleOrDefault(p => p.strCedulaAho == tobjIngreso.strCedulaIng);
-                            aho.decAhorrosEstudiantes -= tobjIngreso.ingresoAhorroEstudiantil.decAhorro;
-                        }
-
-                        if (tobjIngreso.ingresoAhorroFijo != null)
-                        {
-                            tblAhorradore aho = recibosIngresos.tblAhorradores.SingleOrDefault(p => p.strCedulaAho == tobjIngreso.strCedulaIng);
-                            aho.decAhorrosFijo -= tobjIngreso.ingresoAhorroFijo.decAhorro;
-                        }
-
-                        if (tobjIngreso.ingresoAhorroNavideño != null)
-                        {
-                            for (int a = 0; a < tobjIngreso.ingresoAhorroNavideño.Count; a++)
-                            {
-                                tblAhorrosNavidenoDetalle nav = recibosIngresos.tblAhorrosNavidenoDetalles.SingleOrDefault(p => p.strCuenta == tobjIngreso.ingresoAhorroNavideño[a].strCuenta && p.dtmFechaCuota == tobjIngreso.ingresoAhorroNavideño[a].dtmFechaCuo);
-                                nav.bitPagada = false;
-                                nav.dtmFechaPago = Convert.ToDateTime("1/1/1900");
-
-                                tblAhorrosNavideno aho = recibosIngresos.tblAhorrosNavidenos.SingleOrDefault(p => p.strCuenta == tobjIngreso.ingresoAhorroNavideño[a].strCuenta);
-                                aho.intPagadas--;
-
-                            }
-                        }
-
-                        if (tobjIngreso.ingresoAhorroNatilleraEscolar != null)
-                        {
-                            for (int a = 0; a < tobjIngreso.ingresoAhorroNatilleraEscolar.Count; a++)
-                            {
-                                tblAhorrosNatilleraEscolarDetalle nav = recibosIngresos.tblAhorrosNatilleraEscolarDetalles.SingleOrDefault(p => p.strCuenta == tobjIngreso.ingresoAhorroNatilleraEscolar[a].strCuenta && p.dtmFechaCuota == tobjIngreso.ingresoAhorroNatilleraEscolar[a].dtmFechaCuo);
-                                nav.bitPagada = false;
-                                nav.dtmFechaPago = Convert.ToDateTime("1/1/1900");
-
-                                tblAhorrosNatilleraEscolar aho = recibosIngresos.tblAhorrosNatilleraEscolars.SingleOrDefault(p => p.strCuenta == tobjIngreso.ingresoAhorroNatilleraEscolar[a].strCuenta);
-                                aho.intPagadas--;
-
-                            }
-                        }
-
-                        if (tobjIngreso.ingresoAhorroaFuturo != null)
-                        {
-                            for (int a = 0; a < tobjIngreso.ingresoAhorroaFuturo.Count; a++)
-                            {
-                                tblAhorrosaFuturoDetalle afu = recibosIngresos.tblAhorrosaFuturoDetalles.SingleOrDefault(p => p.strCuenta == tobjIngreso.ingresoAhorroaFuturo[a].strCuenta && p.dtmFechaCuota == tobjIngreso.ingresoAhorroaFuturo[a].dtmFechaCuo);
-                                afu.bitPagada = false;
-                                afu.dtmFechaPago = Convert.ToDateTime("1/1/1900");
-                            }
-                        }
-
-                        if (tobjIngreso.ingresoOtrosIngresos != null)
-                        {
-                            ///No se necesita devolver ninguna operación.
-                        }
-
-                        if (tobjIngreso.ingresoAbonoaPrestamo != null)
-                        {
-                            tblCredito cre = recibosIngresos.tblCreditos.SingleOrDefault(p => p.intCodigoCre == tobjIngreso.ingresoAbonoaPrestamo.intCodigoCre);
-                            cre.decAbono -= tobjIngreso.ingresoAbonoaPrestamo.decAbonoPrestamo;
-
-                            if (tobjIngreso.ingresoAbonoaPrestamo.bitDeducirAbonodelMonto)
-                            {
-                                cre.decDebe += tobjIngreso.ingresoAbonoaPrestamo.decAbonoPrestamo;
-                            }
-                        }
-
-                        if (tobjIngreso.ingresoAbonoaVenta != null)
-                        {
-                            tblVenta ven = recibosIngresos.tblVentas.SingleOrDefault(p => p.intCodVenta == tobjIngreso.ingresoAbonoaVenta.intCodVenta);
-                            ven.decDebeVen += tobjIngreso.ingresoAbonoaVenta.decAbona;
-                        }
-
-                        if (tobjIngreso.ingresoAbonoaDeuda != null)
-                        {
-                            for (int a = 0; a < tobjIngreso.ingresoAbonoaDeuda.Count; a++)
-                            {
-                                tblDeuda deu = recibosIngresos.tblDeudas.SingleOrDefault(p => p.intCodDeu == tobjIngreso.ingresoAbonoaDeuda[a].intCodDeu && p.strCedula == tobjIngreso.ingresoAbonoaDeuda[a].strCedula);
-                                deu.decDebeDeu += tobjIngreso.ingresoAbonoaDeuda[a].decAbona;
-                                deu.decAbonaDeu -= tobjIngreso.ingresoAbonoaDeuda[a].decAbona;
-                            }
-                        }
-
-                        recibosIngresos.SubmitChanges();
-
-                        tobjIngreso.log = metodos.gmtdLog("Elimina el recibo " + tobjIngreso.intCodigoIng.ToString(), tobjIngreso.strFormulario);
-                        recibosIngresos.tblLogdeActividades.InsertOnSubmit(tobjIngreso.log);
-
-                        if (tobjIngreso.ingresoAhorro != null)
-                        {
-                            tblAhorrosTransaccione tra = recibosIngresos.tblAhorrosTransacciones.SingleOrDefault(p => p.intCodigoIng == tobjIngreso.intCodigoIng);
-                            tra.bitMuestra = false;
-
-                            tblAhorrosTransaccione transaccion = new tblAhorrosTransaccione();
-                            transaccion.bitMuestra = false;
-                            transaccion.decAcumula = tobjIngreso.ingresoAhorro.decAcumula - tobjIngreso.ingresoAhorro.decAhorro;
-                            transaccion.decAhorrado = tobjIngreso.ingresoAhorro.decAhorrado;
-                            transaccion.decValor = tobjIngreso.ingresoAhorro.decAhorro;
-                            transaccion.dtmFechaTra = tobjIngreso.dtmFechaAnu;
-                            transaccion.intCodigoIng = tobjIngreso.intCodigoIng;
-                            transaccion.strCedulaAho = tobjIngreso.strCedulaIng;
-                            transaccion.strDescripcion = "Comprobante # " + tobjIngreso.intCodigoIng.ToString();
-                            transaccion.strTransaccion = "Retiro";
-                            recibosIngresos.tblAhorrosTransacciones.InsertOnSubmit(transaccion);
-
-                        }
-
-                        if (tobjIngreso.ingresoAhorroEstudiantil != null)
-                        {
-                            tblAhorrosTransaccionesEstudiantil tra = recibosIngresos.tblAhorrosTransaccionesEstudiantils.SingleOrDefault(p => p.intCodigoIng == tobjIngreso.intCodigoIng);
-                            tra.bitMuestra = false;
-
-                            tblAhorrosTransaccionesEstudiantil transaccion = new tblAhorrosTransaccionesEstudiantil();
-                            transaccion.bitMuestra = false;
-                            transaccion.decAcumula = tobjIngreso.ingresoAhorroEstudiantil.decAcumula - tobjIngreso.ingresoAhorroEstudiantil.decAhorro;
-                            transaccion.decAhorrado = tobjIngreso.ingresoAhorroEstudiantil.decAhorrado;
-                            transaccion.decValor = tobjIngreso.ingresoAhorroEstudiantil.decAhorro;
-                            transaccion.dtmFechaTra = tobjIngreso.dtmFechaAnu;
-                            transaccion.intCodigoIng = tobjIngreso.intCodigoIng;
-                            transaccion.strCedulaAho = tobjIngreso.strCedulaIng;
-                            transaccion.strDescripcion = "Comprobante # " + tobjIngreso.intCodigoIng.ToString();
-                            transaccion.strTransaccion = "Retiro";
-
-                            recibosIngresos.tblAhorrosTransaccionesEstudiantils.InsertOnSubmit(transaccion);
-                        }
-
-                        if (tobjIngreso.ingresoAhorroFijo != null)
-                        {
-                            tblAhorrosTransaccionesFijo tra = recibosIngresos.tblAhorrosTransaccionesFijos.SingleOrDefault(p => p.intCodigoIng == tobjIngreso.intCodigoIng);
-                            tra.bitMuestra = false;
-
-                            tblAhorrosTransaccionesFijo transaccion = new tblAhorrosTransaccionesFijo();
-                            transaccion.bitMuestra = false;
-                            transaccion.decAcumula = tobjIngreso.ingresoAhorroFijo.decAcumula - tobjIngreso.ingresoAhorroFijo.decAhorro;
-                            transaccion.decAhorrado = tobjIngreso.ingresoAhorroFijo.decAhorrado;
-                            transaccion.decValor = tobjIngreso.ingresoAhorroFijo.decAhorro;
-                            transaccion.dtmFechaTra = tobjIngreso.dtmFechaAnu;
-                            transaccion.intCodigoIng = tobjIngreso.intCodigoIng;
-                            transaccion.strCedulaAho = tobjIngreso.strCedulaIng;
-                            transaccion.strDescripcion = "Comprobante # " + tobjIngreso.intCodigoIng.ToString();
-                            transaccion.strTransaccion = "Retiro";
-
-                            recibosIngresos.tblAhorrosTransaccionesFijos.InsertOnSubmit(transaccion);
-                        }
-
-                        recibosIngresos.SubmitChanges();
-
-                    }
-                    ts.Complete();
-                    strRetornar = "Registro Eliminado";
-                }
+                return new Utilidad().ejecutarSpConeccionDB(lstParametros, Sp.spIngresoEliminar).Rows[0]["intCodigoIng"].ToString();
             }
             catch (Exception ex)
             {
                 new dao().gmtdInsertarError(ex);
-                strRetornar = "- No se puede eliminar el registro.";
+                strRetornar = "0";
             }
             return strRetornar;
         }

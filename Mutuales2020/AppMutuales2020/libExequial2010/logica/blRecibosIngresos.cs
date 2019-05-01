@@ -280,33 +280,21 @@
         /// <summary> Elimina un recibo de ingreso. </summary>
         /// <param name="tobjIngreso"> Un objeto del tipo ingreso. </param>
         /// <returns> Un string que indica si se ejecuto o no la operación. </returns>
-        public string gmtdEliminar(tblIngreso tobjIngreso)
+        public string gmtdEliminar(int intCodigoIng)
         {
-            tobjIngreso.dtmFechaAnu = new blConfiguracion().gmtdCapturarFechadelServidor();
+            String Respuesta =  new daoRecibosIngresos().gmtdEliminar(intCodigoIng);
 
-            tblAhorradore ahorrador = new daoAhorrador().gmtdConsultar(tobjIngreso.strCedulaIng);
-
-            if (tobjIngreso.ingresoAhorro != null)
+            switch (Respuesta)
             {
-                tobjIngreso.ingresoAhorro.decAhorrado = ahorrador.decAhorrado;
+                case "-1":
+                    return "- No se puede eliminar un recibo de un año diferente al actual del socio.";
+                    break;
+                case "0":
+                    return "- No se puede realizar la operación";
+                    break;
             }
 
-            if (tobjIngreso.ingresoAhorroEstudiantil != null)
-            {
-                tobjIngreso.ingresoAhorroEstudiantil.decAhorrado = ahorrador.decAhorrosEstudiantes;
-            }
-
-            if (tobjIngreso.ingresoAhorroFijo != null)
-            {
-                tobjIngreso.ingresoAhorroFijo.decAhorrado = ahorrador.decAhorrosFijo;
-            }
-
-            if (tobjIngreso.ingresoAbonoaPrestamo != null)
-            {
-                tobjIngreso.ingresoAbonoaPrestamo.bitDeducirAbonodelMonto = (bool)new blConfiguracion().gmtdConsultaConfiguracion().bitDeducirAbonosdelMontodelPrestamo;
-            }
-
-            return new daoRecibosIngresos().gmtdEliminar(tobjIngreso);
+            return Respuesta;
         }
 
         /// <summaiy> Imprimir recibos. </summary>

@@ -69,9 +69,9 @@
         /// <summary> Elimina un recibo de ingreso. </summary>
         /// <param name="tobjIngreso"> Un objeto del tipo ingreso. </param>
         /// <returns> Un string que indica si se ejecuto o no la operación. </returns>
-        public string gmtdEliminar(tblIngreso tobjIngreso)
+        public string gmtdEliminar(int intCodigoIng)
         {
-            return new blRecibosIngresos().gmtdEliminar(tobjIngreso);
+            return new blRecibosIngresos().gmtdEliminar(intCodigoIng);
         }
 
         /// <summaiy> Imprimir recibos. </summary>
