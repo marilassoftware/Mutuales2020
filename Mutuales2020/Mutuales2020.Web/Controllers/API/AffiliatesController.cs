@@ -24,7 +24,5 @@
             var respuesta = this.repository.AddAffiliateSp(JSONLista);
             return Ok(respuesta);
         }
-
-
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace Mutuales2020.Web.Data
 {
+    using Mutuales2020.Business;
     using Mutuales2020.DataAccess.Utilidades;
     //using Common.Models;
     using Mutuales2020.Web.Data.Entities;
@@ -34,8 +35,7 @@
 
         public String AddAffiliateSp(String strInformacion)
         {
-            StoreProcedure sp = new StoreProcedure();
-            var Resultado = sp.ExcecuteSp("uspAffiliateInformationInsert", strInformacion);
+            var Resultado = new BusinessAfiliate().UpdateAfiliateInformation(strInformacion);
             return Resultado;
         }
 

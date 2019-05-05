@@ -2,11 +2,14 @@
 {
     using Newtonsoft.Json;
     using System;
+    using System.Configuration;
     using System.Data;
     using System.Data.SqlClient;
 
     public class StoreProcedure
     {
+        public const String Conexion = "Server=SQL5041.site4now.net;Initial Catalog=DB_A40B4C_dbMutualAMFSA;User ID=DB_A40B4C_dbMutualAMFSA_admin;Password=Sql__12345..;MultipleActiveResultSets=true";
+
         public String ExcecuteSp(String nameSp, String parameters)
         {
             DataTable dt = new DataTable();
@@ -15,7 +18,7 @@
 
             try
             {
-                using (SqlConnection sqlConn = new SqlConnection("Server=SQL5041.site4now.net;Initial Catalog=DB_A40B4C_dbMutualAMFSA;User ID=DB_A40B4C_dbMutualAMFSA_admin;Password=Sql__12345..;MultipleActiveResultSets=true"))
+                using (SqlConnection sqlConn = new SqlConnection(Conexion))
                 {
                     using (SqlCommand sqlCmd = new SqlCommand(nameSp, sqlConn))
                     {

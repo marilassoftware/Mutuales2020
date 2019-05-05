@@ -17,7 +17,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mutuales.Common\Mutuales.Common.csproj" />
+    <ProjectReference Include="..\Mutuales2020.Business\Mutuales2020.Business.csproj" />
     <ProjectReference Include="..\Mutuales2020.DataAccess\Mutuales2020.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Utilities\Sp.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
