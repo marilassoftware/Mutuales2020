@@ -19,17 +19,17 @@
 
         public IEnumerable<Affiliate> GetAffiliates()
         {
-            return this.context.Afiliado.OrderBy(p => p.strNombreAfi);
+            return this.context.Affiliate.OrderBy(p => p.strNombreAfi);
         }
 
         public Affiliate GetAffiliate(int id)
         {
-            return this.context.Afiliado.Find(id);
+            return this.context.Affiliate.Find(id);
         }
 
         public void AddAffiliate(Affiliate product)
         {
-            this.context.Afiliado.Add(product);
+            this.context.Affiliate.Add(product);
         }
 
         public String AddAffiliateSp(String strInformacion)
@@ -46,7 +46,7 @@
 
         public void RemoveAffiliate(Affiliate product)
         {
-            this.context.Afiliado.Remove(product);
+            this.context.Affiliate.Remove(product);
         }
 
         public async Task<bool> SaveAllAsync()
@@ -56,7 +56,7 @@
 
         public bool AffiliateExists(int id)
         {
-            return this.context.Afiliado.Any(p => p.Id == id);
+            return this.context.Affiliate.Any(p => p.Id == id);
         }
     }
 }

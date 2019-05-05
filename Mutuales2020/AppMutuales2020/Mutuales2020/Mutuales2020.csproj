@@ -827,6 +827,8 @@
     <Content Include="Despliegues\2020.1\05 - spIngresoEliminar.Sql" />
     <Content Include="Despliegues\2020.1\06 - spEgresoEliminar.Sql" />
     <Content Include="Despliegues\2020.1\07 - spNuevoAno.Sql" />
+    <Content Include="Despliegues\2020.1\08 - spSociosProcesadosConsultar.Sql" />
+    <Content Include="Despliegues\2020.1\09 - spSociosProcesadosActualizar.Sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Mutuales2020.Win")]
+[assembly: AssemblyTitle("prueba")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Mutuales2020.Win")]
+[assembly: AssemblyProduct("prueba")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("df870723-610e-4400-9a2c-ac71cf9272dc")]
+[assembly: Guid("7caa11ab-06d2-4c87-af5e-6dfaa9965258")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

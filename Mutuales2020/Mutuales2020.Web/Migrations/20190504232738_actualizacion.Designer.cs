@@ -10,8 +10,8 @@ using Mutuales2020.Web.Data;
 namespace Mutuales2020.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190429004751_cedula")]
-    partial class cedula
+    [Migration("20190504232738_actualizacion")]
+    partial class actualizacion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -141,7 +141,7 @@ namespace Mutuales2020.Web.Migrations
 
                     b.Property<int>("intAnoAfi");
 
-                    b.Property<int>("intCodigoSoc");
+                    b.Property<int>("intCodigoAfi");
 
                     b.Property<int>("intMesAfi");
 
@@ -170,7 +170,7 @@ namespace Mutuales2020.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Afiliado");
+                    b.ToTable("Affiliate");
                 });
 
             modelBuilder.Entity("Mutuales2020.Web.Data.Entities.User", b =>

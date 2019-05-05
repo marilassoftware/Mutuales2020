@@ -12,7 +12,7 @@
 
         }
 
-        public DbSet<Affiliate> Afiliado { get; set; }
+        public DbSet<Affiliate> Affiliate { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -168,7 +168,7 @@ namespace Mutuales2020.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Afiliado");
+                    b.ToTable("Affiliate");
                 });
 
             modelBuilder.Entity("Mutuales2020.Web.Data.Entities.User", b =>

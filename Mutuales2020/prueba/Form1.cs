@@ -1,65 +1,51 @@
-﻿namespace Mutuales2020.Win
-{
-    using Mutuales.Common.Models;
-    using Mutuales2020.Win.Utilidades;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Configuration;
-    using System.Data;
-    using System.Data.SqlClient;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.ServiceProcess;
-    using System.Text;
-    using System.Timers;
+﻿using Mutuales.Common.Models;
+using Mutuales2020.Win;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 
-    public partial class Service1 : ServiceBase
+namespace prueba
+{
+    public partial class Form1 : Form
     {
-        public Timer tiempo;
-        public Service1()
+        public Form1()
         {
             InitializeComponent();
-            tiempo = new Timer();
-            tiempo.Interval = Convert.ToInt32(ConfigurationManager.AppSettings["Tiempo"].ToString());
-            tiempo.Elapsed += new ElapsedEventHandler(tiempo_elapsed);
         }
 
-        private async void tiempo_elapsed(object sender, ElapsedEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Boolean bitProcesar = false;
 
-            if (!bitProcesar)
+        }
+
+        public void actualizarEnvio(Int32 intSocioActualidado)
+        {
+            List<Affiliate> lstAfiliados = new List<Affiliate>();
+
+            try
             {
-                List<Affiliate> lstAfiliados = this.consultarEnvio();
+                List<SqlParameter> lstParametros = new List<SqlParameter>();
+                SqlParameter objParameter = new SqlParameter();
+                objParameter.DbType = DbType.Int32;
+                objParameter.Direction = ParameterDirection.Input;
+                objParameter.ParameterName = "intSocioActualidado";
+                objParameter.Value = intSocioActualidado;
+                lstParametros.Add(objParameter);
 
-                String url = ConfigurationManager.AppSettings["urlBase"].ToString();
+                DataTable dt = this.ejecutarSpConeccionDB(lstParametros, Sp.spSociosProcesadosActualizar);
 
-                ApiService objService = new ApiService();
-
-                var response = await objService.PostAsync(
-                    url,
-                    "/api",
-                    "/Affiliates",
-                    lstAfiliados);
-
-                if (response.Result.ToString() == "OK")
-                {
-                    for (Int32 indexRegistros = 0; indexRegistros < lstAfiliados.Count; indexRegistros++)
-                    {
-                        this.actualizarEnvio(lstAfiliados[indexRegistros].id);
-                    }
-                }
             }
-        }
-
-        protected override void OnStart(string[] args)
-        {
-            tiempo.Enabled = true;
-        }
-
-        protected override void OnStop()
-        {
+            catch (Exception ex)
+            {
+                
+            }
 
         }
 
@@ -84,10 +70,10 @@
                     objAffiliate.intMesAfi = Convert.ToInt32(dt.Rows[indexTabla]["intMesAfi"]);
                     objAffiliate.strApellido1Afi = dt.Rows[indexTabla]["strApellido1Afi"].ToString();
                     objAffiliate.strApellido2Afi = dt.Rows[indexTabla]["strApellido2Afi"].ToString();
+                    objAffiliate.strCedulaAfi = dt.Rows[indexTabla]["strCedulaAfi"].ToString();
                     objAffiliate.strCodigoMut = ConfigurationManager.AppSettings["CodigoMutual"].ToString();
                     objAffiliate.strNombreAfi = dt.Rows[indexTabla]["strNombreAfi"].ToString();
                     objAffiliate.strPlanAfi = dt.Rows[indexTabla]["strPlan"].ToString();
-                    objAffiliate.strCedulaAfi = dt.Rows[indexTabla]["strCedulaAfi"].ToString();
 
                     lstAfiliados.Add(objAffiliate);
                 }
@@ -144,29 +130,29 @@
             return null;
         }
 
-        public void actualizarEnvio(Int32 intSocioActualidado)
+        private async void Button1_Click(object sender, EventArgs e)
         {
-            List<Affiliate> lstAfiliados = new List<Affiliate>();
+            List<Affiliate> lstAfiliados = this.consultarEnvio();
 
-            try
+            String url = ConfigurationManager.AppSettings["urlBase"].ToString();
+
+            ApiService objService = new ApiService();
+
+            var response = await objService.PostAsync(
+                url,
+                "/api",
+                "/Affiliates",
+                lstAfiliados);
+
+            if (response.Result.ToString() == "OK")
             {
-                List<SqlParameter> lstParametros = new List<SqlParameter>();
-                SqlParameter objParameter = new SqlParameter();
-                objParameter.DbType = DbType.Int32;
-                objParameter.Direction = ParameterDirection.Input;
-                objParameter.ParameterName = "intSocioActualidado";
-                objParameter.Value = intSocioActualidado;
-                lstParametros.Add(objParameter);
-
-                DataTable dt = this.ejecutarSpConeccionDB(lstParametros, Sp.spSociosProcesadosActualizar);
-
+                for (Int32 indexRegistros = 0; indexRegistros < lstAfiliados.Count; indexRegistros++)
+                {
+                    this.actualizarEnvio(lstAfiliados[indexRegistros].id);
+                }
             }
-            catch (Exception ex)
-            {
 
-            }
 
         }
-
     }
 }

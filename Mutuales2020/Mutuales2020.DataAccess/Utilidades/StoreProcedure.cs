@@ -15,7 +15,7 @@
 
             try
             {
-                using (SqlConnection sqlConn = new SqlConnection("Server=DESKTOP-DQ7JDQP\\SQL2017;Initial Catalog=dbMutuales2020Ppal;Persist Security Info=False;User ID=sa;Password=Sql__12345.."))
+                using (SqlConnection sqlConn = new SqlConnection("Server=SQL5041.site4now.net;Initial Catalog=DB_A40B4C_dbMutualAMFSA;User ID=DB_A40B4C_dbMutualAMFSA_admin;Password=Sql__12345..;MultipleActiveResultSets=true"))
                 {
                     using (SqlCommand sqlCmd = new SqlCommand(nameSp, sqlConn))
                     {

@@ -18,7 +18,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAffiliate([FromBody] List<Mutuales2020.Common.Models.Affiliate> Affiliate)
+        public async Task<IActionResult> PostAffiliate([FromBody] List<Mutuales.Common.Models.Affiliate> Affiliate)
         {
             var JSONLista = JsonConvert.SerializeObject(Affiliate);
             var respuesta = this.repository.AddAffiliateSp(JSONLista);
