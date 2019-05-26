@@ -24,7 +24,6 @@
 
             this.rptReporteSocios.RefreshReport();
             this.rptReporteSocios.RefreshReport();
-
         }
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)

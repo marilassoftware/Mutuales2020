@@ -29,7 +29,7 @@
         {
             Boolean bitProcesar = false;
 
-            if (!bitProcesar)
+            if (bitProcesar)
             {
                 List<Affiliate> lstAfiliados = this.consultarEnvio();
 

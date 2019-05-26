@@ -50,13 +50,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(634, 40);
             this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(0, -1);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(632, 40);
+            this.lblTitulo.Size = new System.Drawing.Size(632, 41);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "CAMBIAR BENEFICIARIO";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
