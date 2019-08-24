@@ -17,9 +17,17 @@
     public partial class Service1 : ServiceBase
     {
         public Timer tiempo;
+
+        public string source = "Mutuales2020.WinServices";
+        public string log = "Application";
+        EventLog systemEventLog = new EventLog("System");
+
         public Service1()
         {
             InitializeComponent();
+
+            this.AutoLog = false;
+
             tiempo = new Timer();
             tiempo.Interval = Convert.ToInt32(ConfigurationManager.AppSettings["Tiempo"].ToString());
             tiempo.Elapsed += new ElapsedEventHandler(tiempo_elapsed);
@@ -27,15 +35,21 @@
 
         private async void tiempo_elapsed(object sender, ElapsedEventArgs e)
         {
+            EventLog.WriteEntry(source, "Start tiempo_elapsed", EventLogEntryType.Information, 100);
+
             Boolean bitProcesar = false;
 
-            if (bitProcesar)
+            //if (bitProcesar)
+            //{
+            try
             {
                 List<Affiliate> lstAfiliados = this.consultarEnvio();
 
                 String url = ConfigurationManager.AppSettings["urlBase"].ToString();
 
                 ApiService objService = new ApiService();
+
+                EventLog.WriteEntry(source, "Send post", EventLogEntryType.Information, 100);
 
                 var response = await objService.PostAsync(
                     url,
@@ -45,17 +59,31 @@
 
                 if (response.Result.ToString() == "OK")
                 {
+                    EventLog.WriteEntry(source, "Post Ok", EventLogEntryType.Information, 100);
+
                     for (Int32 indexRegistros = 0; indexRegistros < lstAfiliados.Count; indexRegistros++)
                     {
                         this.actualizarEnvio(lstAfiliados[indexRegistros].id);
                     }
                 }
+
+                else
+                {
+                    EventLog.WriteEntry(source, "Post Incorrect :: " + response.Message, EventLogEntryType.Warning, 100);
+                }
             }
+            catch (Exception ex)
+            {
+                EventLog.WriteEntry(source, ex.Message, EventLogEntryType.Error, 100);
+            }
+            //}
         }
 
         protected override void OnStart(string[] args)
         {
             tiempo.Enabled = true;
+
+            EventLog.WriteEntry(source, "Start services", EventLogEntryType.Information, 100);
         }
 
         protected override void OnStop()
@@ -63,16 +91,18 @@
 
         }
 
-
         public List<Affiliate> consultarEnvio()
         {
             List<Affiliate> lstAfiliados = new List<Affiliate>();
 
             try
             {
+                EventLog.WriteEntry(source, "Start consultarEnvio", EventLogEntryType.Information, 100);
                 List<SqlParameter> lstParametros = new List<SqlParameter>();
 
                 DataTable dt = this.ejecutarSpConeccionDB(lstParametros, Sp.spSociosProcesadosConsultar);
+
+                EventLog.WriteEntry(source, "Registers to process", EventLogEntryType.Information, 100);
 
                 for (int indexTabla = 0; indexTabla < dt.Rows.Count; indexTabla++)
                 {
@@ -88,12 +118,18 @@
                     objAffiliate.strNombreAfi = dt.Rows[indexTabla]["strNombreAfi"].ToString();
                     objAffiliate.strPlanAfi = dt.Rows[indexTabla]["strPlan"].ToString();
                     objAffiliate.strCedulaAfi = dt.Rows[indexTabla]["strCedulaAfi"].ToString();
+                    objAffiliate.Tipo = dt.Rows[indexTabla]["Tipo"].ToString();
 
                     lstAfiliados.Add(objAffiliate);
                 }
+
+                EventLog.WriteEntry(source, "Finish process", EventLogEntryType.Information, 100);
+
             }
             catch (Exception ex)
             {
+                EventLog.WriteEntry(source, ex.Message, EventLogEntryType.Error, 100);
+
                 return new List<Affiliate>();
             }
 
@@ -132,7 +168,7 @@
             }
             catch (Exception ex)
             {
-
+                EventLog.WriteEntry(source, ex.Message, EventLogEntryType.Error, 100);
             }
             finally
             {
@@ -163,10 +199,8 @@
             }
             catch (Exception ex)
             {
-
+                EventLog.WriteEntry(source, ex.Message, EventLogEntryType.Error, 100);
             }
-
         }
-
     }
 }

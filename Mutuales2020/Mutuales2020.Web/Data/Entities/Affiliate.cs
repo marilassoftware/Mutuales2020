@@ -54,5 +54,9 @@
         [Display(Name = "Mutual")]
         [Required]
         public String strCodigoMut { get; set; }
+
+        [Display(Name = "Tipo")]
+        [Required]
+        public String Tipo { get; set; }
     }
 }

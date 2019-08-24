@@ -25,5 +25,7 @@ namespace Mutuales.Common.Models
         public DateTime dtmFechaActualizacion { get; set; }
 
         public String strCodigoMut { get; set; }
+
+        public String Tipo { get; set; }
     }
 }

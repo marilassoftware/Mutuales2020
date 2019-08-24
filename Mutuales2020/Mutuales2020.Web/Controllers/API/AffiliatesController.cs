@@ -17,6 +17,12 @@
             this.repository = repository;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> get()
+        {
+            return Ok("Ok");
+        }
+
         [HttpPost]
         public async Task<IActionResult> PostAffiliate([FromBody] List<Mutuales.Common.Models.Affiliate> Affiliate)
         {
