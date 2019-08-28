@@ -39,9 +39,9 @@
 
             Boolean bitProcesar = false;
 
-            //if (bitProcesar)
-            //{
-            try
+            if (bitProcesar)
+            {
+                try
             {
                 List<Affiliate> lstAfiliados = this.consultarEnvio();
 
@@ -76,7 +76,7 @@
             {
                 EventLog.WriteEntry(source, ex.Message, EventLogEntryType.Error, 100);
             }
-            //}
+            }
         }
 
         protected override void OnStart(string[] args)

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Affiliate.cs" />
+    <Compile Include="Models\configuration.cs" />
+    <Compile Include="Models\MyConfig.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

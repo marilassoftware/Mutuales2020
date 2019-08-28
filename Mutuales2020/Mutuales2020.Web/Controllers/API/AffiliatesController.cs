@@ -26,8 +26,16 @@
         [HttpPost]
         public async Task<IActionResult> PostAffiliate([FromBody] List<Mutuales.Common.Models.Affiliate> Affiliate)
         {
-            var JSONLista = JsonConvert.SerializeObject(Affiliate);
-            var respuesta = this.repository.AddAffiliateSp(JSONLista);
+            string respuesta = string.Empty;
+            try
+            {
+                var JSONLista = JsonConvert.SerializeObject(Affiliate);
+                respuesta = this.repository.AddAffiliateSp(JSONLista);
+            }
+            catch (Exception ex)
+            {
+
+            }
             return Ok(respuesta);
         }
     }

@@ -1,0 +1,4 @@
+{
+  //"conexion": "Server=SQL5045.site4now.net;Initial Catalog=DB_A40B4C_dbMutualAMT;User ID=DB_A40B4C_dbMutualAMT_admin;Password=Sql__12345..;MultipleActiveResultSets=true",
+  "conexion": "Server=DESKTOP-DQ7JDQP\\SQL2017;Initial Catalog=DB_A40B4C_dbMutualAMT;User ID=sa;Password=Sql__12345..;MultipleActiveResultSets=true"
+}
