@@ -50,6 +50,7 @@
                 cfg.Password.RequireLowercase = false;
                 cfg.Password.RequireNonAlphanumeric = false;
                 cfg.Password.RequireUppercase = false;
+                //cfg.SignIn.RequireConfirmedEmail = true;
             })
                 .AddEntityFrameworkStores<DataContext>();
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Mutuales2020.Web.Data.Entities;
+using Mutuales2020.Web.Models;
 using System.Threading.Tasks;
 
 namespace Mutuales2020.Web.Helpers
@@ -15,5 +16,9 @@ namespace Mutuales2020.Web.Helpers
         Task AddUserToRoleAsync(User user, string roleName);
 
         Task<bool> IsUserInRoleAsync(User user, string roleName);
+
+        Task<SignInResult> LoginAsync(LoginViewModel model);
+
+        Task LogoutAsync();
     }
 }
