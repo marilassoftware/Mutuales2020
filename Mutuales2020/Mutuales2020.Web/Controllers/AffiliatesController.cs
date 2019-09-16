@@ -4,7 +4,6 @@
     using Microsoft.EntityFrameworkCore;
     using Mutuales2020.Web.Data;
     using Mutuales2020.Web.Data.Entities;
-    using System.Linq;
     using System.Threading.Tasks;
 
     public class AffiliatesController : Controller
@@ -49,7 +48,7 @@
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Affiliate affiliate)
         {
             if (ModelState.IsValid)
@@ -82,7 +81,7 @@
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Affiliate affiliate)
         {
             if (id != affiliate.Id)

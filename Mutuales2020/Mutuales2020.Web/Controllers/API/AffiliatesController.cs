@@ -1,5 +1,7 @@
 ﻿namespace Mutuales2020.Web.Controllers.API
 {
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Mutuales2020.Web.Data;
     using Newtonsoft.Json;
@@ -8,6 +10,7 @@
     using System.Threading.Tasks;
 
     [Route("api/[Controller]")]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AffiliatesController : Controller
     {
         private readonly IRepository repository;
@@ -24,6 +27,7 @@
         }
 
         [HttpPost]
+        //[Route("prueba")]
         public async Task<IActionResult> PostAffiliate([FromBody] List<Mutuales.Common.Models.Affiliate> Affiliate)
         {
             string respuesta = string.Empty;

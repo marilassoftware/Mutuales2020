@@ -97,7 +97,7 @@ namespace libMutuales2020.logica
                 tobjCredito.log = metodos.gmtdLog("Ingresa el crédito " + tobjCredito.intCodigoCre.ToString(), tobjCredito.strFormulario);
 
                 double dblValorCuota = this.gmtCalcularValordeCuota(tobjCredito);
-                
+
                 List<tblCreditosCuota> lstCuotas = new List<tblCreditosCuota>();
                 pGenerarFechasdeCuotasAutomaticamente(tobjCredito);
                 try
@@ -132,7 +132,9 @@ namespace libMutuales2020.logica
                 return new daoCreditos().gmtdInsertar(tobjCredito);
             }
             else
+            {
                 return "- Este registro ya aparece ingresado.";
+            }
         }
 
         /// <summary> Calcula el valor de cada cuota de un credito. </summary>

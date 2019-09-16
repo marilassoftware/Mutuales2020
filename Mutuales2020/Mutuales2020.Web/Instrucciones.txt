@@ -9,3 +9,5 @@ update database
 O POR DOS
 dotnet ef migrations add <NOMBREMIGRACION>
 dotnet ef database update
+
+Instalo el MailKit para los correos

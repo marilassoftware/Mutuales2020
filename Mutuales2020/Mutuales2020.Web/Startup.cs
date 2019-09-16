@@ -8,9 +8,11 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.IdentityModel.Tokens;
     using Mutuales2020.Web.Data;
     using Mutuales2020.Web.Data.Entities;
     using Mutuales2020.Web.Helpers;
+    using System.Text;
 
     public class Startup
     {
@@ -31,8 +33,22 @@
                 cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddAuthentication()
+                .AddCookie()
+                .AddJwtBearer(cfg =>
+            {
+                cfg.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidIssuer = Configuration["Tokens:Issuer"],
+                    ValidAudience = Configuration["Tokens:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
+                };
+            });
+
+
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<IRepository, Repository>();
+            services.AddScoped<IMailHelper, MailHelper>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -44,6 +60,9 @@
 
             services.AddIdentity<User, IdentityRole>(cfg =>
             {
+                //indico que requiero tokens ara autorizar mis usuarios.
+                cfg.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
+                cfg.SignIn.RequireConfirmedEmail = true;
                 cfg.User.RequireUniqueEmail = true;
                 cfg.Password.RequireDigit = false;
                 cfg.Password.RequiredUniqueChars = 0;
@@ -52,6 +71,7 @@
                 cfg.Password.RequireUppercase = false;
                 //cfg.SignIn.RequireConfirmedEmail = true;
             })
+                .AddDefaultTokenProviders() //esto va relacionado con la linea cfg.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
                 .AddEntityFrameworkStores<DataContext>();
 
             services.Configure<PasswordHasherOptions>(options => options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV2);
